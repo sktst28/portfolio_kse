@@ -173,7 +173,7 @@ $container-max-widths: (
 	// xs: 576px,
 	// sm: 768px,
 	// md: 1024px,
-	// lg: 1200px,,,,,,,
+	// lg: 1200px,,,,,,,,
 ) !default;
 
 @include _assert-ascending($container-max-widths, '$container-max-widths');
@@ -205,6 +205,7 @@ $font-family-serif: -apple-system, BlinkMacSystemFont, 'Times New Roman', 'Palat
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 $font-family-main: $font-family-sans-serif !default;
 $font-family-sub: 'Montserrat', 'SUIT', $font-family-serif !default;
+$font-family-sub2: 'Rajdhani', 'SUIT', $font-family-serif !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`

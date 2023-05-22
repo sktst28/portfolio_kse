@@ -25,12 +25,12 @@
 		position: relative;
 		> .link {
 			position: relative;
-			height: $nav-height;
+			height: rem(40);
 			padding: 0 em(30, 20);
 			display: flex;
 			align-items: center;
 			text-align: center;
-			color: #333;
+			color: #fff;
 			font-size: em(20);
 			font-weight: 500;
 			line-height: 1.2;

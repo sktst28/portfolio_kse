@@ -190,3 +190,34 @@
 	font-weight: 900;
 	src: local('SUIT'), url('../fonts/SUIT-Heavy.woff2') format('woff2');
 }
+
+@font-face {
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Rajdhani'), url('../fonts/Rajdhani-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Rajdhani'), url('../fonts/Rajdhani-SemiBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Rajdhani'), url('../fonts/Rajdhani-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Rajdhani'), url('../fonts/Rajdhani-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'Rajdhani';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Rajdhani'), url('../fonts/Rajdhani-Light.woff') format('woff');
+}

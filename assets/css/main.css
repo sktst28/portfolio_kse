@@ -1,4 +1,12 @@
 /* Made by Masstige */
+@-webkit-keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 @keyframes progress {
   0% {
     width: 0;
@@ -31,14 +39,16 @@
   min-height: 1000%;
   max-width: none;
   max-height: none;
-  transform: translate(-50%, -50%) scale(0.1);
+  -webkit-transform: translate(-50%, -50%) scale(0.1);
+          transform: translate(-50%, -50%) scale(0.1);
 }
 .main-visual .txt-bx {
   position: absolute;
   width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #fff;
   text-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
   letter-spacing: -0.05em;
@@ -51,17 +61,23 @@
   margin-top: 1em;
   font-size: 1.875em;
   font-weight: 300;
-  transition-delay: 300ms !important;
+  -webkit-transition-delay: 300ms !important;
+          transition-delay: 300ms !important;
 }
 .main-visual .swiper-slide .txt-bx .title,
 .main-visual .swiper-slide .txt-bx .text {
-  transform: translateY(50px);
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
   opacity: 0;
+  -webkit-transition: 1000ms opacity, 1000ms -webkit-transform;
+  transition: 1000ms opacity, 1000ms -webkit-transform;
   transition: 1000ms opacity, 1000ms transform;
+  transition: 1000ms opacity, 1000ms transform, 1000ms -webkit-transform;
 }
 .main-visual .swiper-slide-active .txt-bx .title,
 .main-visual .swiper-slide-active .txt-bx .text {
-  transform: translateY(0);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   opacity: 1;
 }
 @media all and (max-width: 1200px) {
@@ -81,7 +97,8 @@
   position: absolute;
   left: 50%;
   bottom: 3.125rem;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .main-visual .swiper-pagination-bullet {
   margin: 0 4px;
@@ -95,9 +112,11 @@
   z-index: 10;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: #fff;
   font-size: 2.5rem;
+  -webkit-transition: 300ms color;
   transition: 300ms color;
 }
 .main-visual .swiper-button:hover {
@@ -135,22 +154,36 @@
   position: absolute;
   bottom: 3.125rem;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 3;
   margin-left: -8px;
   margin-right: -8px;
 }
 .main-visual .swiper-control.swiper-control--progress .swiper-pagination {
-  transform: none;
+  -webkit-transform: none;
+          transform: none;
 }
 .main-visual .swiper-control.swiper-control--progress .swiper-pagination-bullets {
   position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -175,7 +208,8 @@
   background-color: #007bff;
 }
 .main-visual .swiper-control.swiper-control--progress .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
-  animation: progress 3s linear 0s 1;
+  -webkit-animation: progress 3s linear 0s 1;
+          animation: progress 3s linear 0s 1;
   width: 100%;
 }
 .main-visual .swiper-control.swiper-control--progress-no {
@@ -186,12 +220,17 @@
   z-index: 10;
 }
 .main-visual .swiper-control.swiper-control--progress-no .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .main-visual .swiper-control.swiper-control--progress-no .swiper-pagination {
   position: static;
-  transform: none;
+  -webkit-transform: none;
+          transform: none;
 }
 .main-visual .swiper-control.swiper-control--progress-no .swiper-pagination-bullet {
   width: auto;
@@ -210,7 +249,8 @@
   position: absolute;
   left: 2.1875rem;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 7.5rem;
   height: 2px;
   background: rgba(255, 255, 255, 0.5);
@@ -221,7 +261,8 @@
   position: absolute;
   left: 2.1875rem;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 0;
   height: 2px;
   background: #000;
@@ -234,6 +275,11 @@
   display: block;
 }
 .main-visual .swiper-control.swiper-control--progress-no .swiper-pagination-bullet-active::after {
-  animation: progress 5.1s linear 0s 1;
+  -webkit-animation: progress 5.1s linear 0s 1;
+          animation: progress 5.1s linear 0s 1;
 }
-/*# sourceMappingURL=main.css.map */
+
+body {
+  background-color: rgb(43, 42, 42);
+  color: #fff;
+}

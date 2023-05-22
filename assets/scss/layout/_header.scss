@@ -2,8 +2,6 @@
 $header-fix: true; //true: 헤더가 상단 고정일 경우입니다.
 
 .header {
-	border-bottom: 1px solid #ddd;
-	background-color: #fff;
 	width: 100%;
 	z-index: 500;
 	@if ($header-fix == true) {

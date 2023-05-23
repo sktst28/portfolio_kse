@@ -10,3 +10,57 @@ body {
 	background-color: #262523;
 	color: #e4e4e4;
 }
+
+.text {
+	font-size: rem(50);
+	font-weight: 500;
+}
+
+.section-intro {
+}
+
+.section-about {
+}
+
+.section-work {
+}
+
+/* #wrap {
+	width: 100%;
+}
+#wrap section {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	border-bottom: 1px dotted #ddd;
+}
+#wrap section .inner {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#wrap section.sec2 {
+	height: var(--sec2_Height);
+}
+#wrap section.sec2 h2 {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 20%;
+	width: 100%;
+	font-size: 40px;
+	text-align: center;
+	transform: translateY(30px);
+	-webkit-transform: translateY(30px);
+	transition: all 0.2s ease;
+}
+#wrap section.sec2 h2.sec2_tit1 {
+	opacity: 1;
+	transform: translateY(0);
+	-webkit-transform: translateY(0);
+}
+ */

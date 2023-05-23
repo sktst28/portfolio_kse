@@ -12,20 +12,107 @@
 		<? include "../include/header.html" ?>
 
 		<main class="main" id="contents">
-			<!-- S : section -->
-			<section class="section">
-				<div class="container"></div>
+			<!-- S : section-intro -->
+			<section class="section section-intro">
+				<div class="container">
+					<div class="text">
+						We exist to create <br />
+						the future
+					</div>
+				</div>
 			</section>
-			<!-- E : section -->
+			<!-- E : section-intro -->
 
-			<!-- S : section -->
-			<section class="section">
+			<!-- S : section-about -->
+			<section class="section section-about">
+				<div class="container">
+					<div class="about-flex">
+						<div class="about-img wow fadeInLeft">
+							<img src="" alt="" />
+						</div>
+						<div class="about-text wow fadeInRight">
+							<p class="about-des"></p>
+						</div>
+					</div>
+					<ul class="skill-list wowrap">
+						<li class="item"></li>
+					</ul>
+				</div>
+			</section>
+			<!-- E : section-about -->
+
+			<!-- S : section-work -->
+			<section class="section section-work">
+				<div class="container">
+					<div class="about-flex">
+						<div class="about-img">
+							<img src="" alt="" />
+						</div>
+						<div class="about-text">
+							<p class="about-des"></p>
+						</div>
+					</div>
+					<ul class="skill-list">
+						<li class="item">
+							<div class="text">#HTML5</div>
+						</li>
+						<li class="item">
+							<div class="text">#CSS3</div>
+						</li>
+						<li class="item">
+							<div class="text">#SCSS</div>
+						</li>
+						<li class="item">
+							<div class="text">#Javascript(ES6+)</div>
+						</li>
+						<li class="item">
+							<div class="text">#JQuery</div>
+						</li>
+						<li class="item">
+							<div class="text">#Zeplin</div>
+						</li>
+						<li class="item">
+							<div class="text">#PHP</div>
+						</li>
+						<li class="item">
+							<div class="text">#Photoshop</div>
+						</li>
+						<li class="item">
+							<div class="text">#Illustrator</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- E : section-work -->
+
+			<!-- S : section-contact -->
+			<section class="section section-contact">
 				<div class="container"></div>
 			</section>
-			<!-- E : section -->
+			<!-- E : section-contact -->
 		</main>
 
 		<? include "../include/footer.html" ?>
 		<? include "../include/js.html" ?>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+		<script>
+			gsap.registerPlugin(ScrollTrigger);
+
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: '.sec2', // 객체기준범위
+					pin: true, // 고정
+					start: 'top top', // 시작점
+					end: 'bottom bottom', // 끝점
+					scrub: 0.5, // 모션바운스
+					markers: true, // 개발가이드선
+					onLeave: function () {
+						// 끝나는지점 callback함수
+						console.log('end');
+					},
+				},
+			});
+		</script>
 	</body>
 </html>

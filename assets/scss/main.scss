@@ -11,18 +11,49 @@ body {
 	color: #e4e4e4;
 }
 
-.text {
-	font-size: rem(50);
-	font-weight: 500;
+.section {
+	padding: rem(50) 0;
+}
+
+.title {
+	font-size: rem(40);
+	text-align: center;
 }
 
 .section-intro {
 }
 
 .section-about {
+	.about-flex {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+
+		.about-img,
+		.about-text {
+			flex: 1 0 50%;
+			max-width: 50%;
+		}
+	}
 }
 
 .section-work {
+	.skill-list {
+		display: flex;
+		align-items: center;
+
+		.item {
+			padding: 0 rem(10);
+		}
+		.text {
+			font-size: rem(18);
+			//color: #b3c6d2;
+			color: #a5eee6;
+			border: 1px solid #a5eee6;
+			border-radius: 20px;
+			padding: rem(5) rem(15);
+		}
+	}
 }
 
 /* #wrap {

@@ -8,21 +8,19 @@
 
 <!-- 사이트 기본설정 영역 START -->
 <!-- SEO -->
-<meta name="title" content="<?=$SS[sitename]?>" />
-<meta name="keywords" content="<?=$SS[sitekeyword]?>" />
-<meta name="author" content="Masstige" />
-<meta name="description" content="<?=$SS[sitedescription]?>" />
-<!-- 최대 155자 이내 -->
+<meta name="title" content="김서은의 포트폴리오" />
+<meta name="keywords" content="포트폴리오,웹 퍼블리셔" />
+<meta name="author" content="김서은 웹퍼블리셔 포트폴리오" />
+<meta name="description" content="김서은의 웹퍼블리셔 포트폴리오" />
+
 <meta name="Robots" content="index, follow" />
 <!-- 검색 제외 페이지인 경우 noindex, nofollow -->
 
 <!-- Open Graph -->
+<meta property="og:title" content="Seoeun Kim's Portfolio" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="<?=$SS[sitename]?>" />
-<meta property="og:image" content="<?=$SS[siteimg]?>" />
-<meta property="og:site_name" content="<?=$SS[sitename]?>" />
-<meta property="og:url" content="<?=$SS[siteurl]?>" />
-<meta property="og:description" content="<?=$SS[sitedescription]?>" />
+<meta property="og:description" content="김서은 포트폴리오입니다." />
+<meta property="og:url" content="" />
 
 <!-- Twitter -->
 <meta name="twitter:image" content="<?=$SS[siteimg]?>" />
@@ -41,8 +39,6 @@
 <link rel="canonical" href="<?=$SS[siteurl]?>" />
 <!-- 대표 URL -->
 
-<?=$SS[tracking_code1]?>
-<?=$SS[tracking_code2]?>
 <!-- 사이트 기본설정 영역 END -->
 
 <!-- XEIcon -->
@@ -62,21 +58,6 @@
 
 <!-- Load jQuery -->
 <script src="../assets/js/lib/jquery-1.7.1.min.js"></script>
-<!-- update your pre-1.9 jQuery code to jQuery 1.9 up to 3.0 -->
 <script src="../assets/js/lib/jquery-migrate-1.4.1.min.js"></script>
-<!-- jQuery 3.0 or higher, once you have used Migrate 1.x and upgraded to jQuery 1.9 or higher -->
-<!-- <script src="../assets/js/lib/jquery-migrate-3.3.2.min.js"></script>  -->
-<!-- mCustomScrollbar 사용시 아래 1.11.1 버전 사용 -->
-<!-- <script src="../assets/js/lib/jquery-1.11.1.min.js"></script> -->
 
 <script src="../assets/js/lib/jquery-ui.min.js"></script>
-
-<!-- Console 화면 노출  -->
-<script>
-	var cssRule = 'font-size: 16px;';
-	if (window.console != undefined) {
-		setTimeout(console.log.bind(console, '%c _____ _____ _____ _____ _____ _____ _____ _____\n|     |  _  |   __|   __|_   _|     |   __|   __|\n| | | |     |__   |__   | | | |-   -|  |  |   __|\n|_|_|_|__|__|_____|_____| |_| |_____|_____|_____|\nCreated By MASSTIGE.', cssRule), 0);
-	}
-</script>
-
-<title><? if($P_dp0!='main'){?> <? if($P_dp3!=null){?> <?=${nav_.$P_dp1._.$P_dp2._.$P_dp3}?> | <? }?> <? if($P_dp2!=null){?> <?=${nav_.$P_dp1._.$P_dp2}?> | <? }?> <?=${nav_.$P_dp1}?> | <? }?> <?=$SS[sitename]?></title>

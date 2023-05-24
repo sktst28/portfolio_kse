@@ -2,10 +2,7 @@
 <!DOCTYPE html>
 <html lang="<?=$P_lang?>">
 	<head>
-		<?
-    $P_dp0 = 'main';
-    include "../include/meta.html" 
-    ?>
+		<? include "../include/meta.html" ?>
 		<link rel="stylesheet" href="../assets/css/main.min.css" />
 	</head>
 	<body class="main-body">
@@ -25,13 +22,47 @@
 
 			<!-- S : section-about -->
 			<section class="section section-about">
+				<h2 class="title">About me</h2>
 				<div class="container">
 					<div class="about-flex">
 						<div class="about-img wow fadeInLeft">
-							<img src="" alt="" />
+							<img src="../assets/images/main/sample_img.jpg" alt="" />
 						</div>
 						<div class="about-text wow fadeInRight">
-							<p class="about-des"></p>
+							<p class="about-des">
+								즐겁고 흥미로운 웹 사이트를 구현하는 1년 6개월차 웹 퍼블리셔 김서은입니다.<br />
+								CSS와 Javascript를 이용해 모션을 주고 동적인 화면을 구사하는 것을 좋아하며,<br />
+								화면에 보여지는 것 뿐만 아니라 어떻게하면 운영과 유지보수, 개발에 효율적일지 늘 고민하며 시맨틱 마크업을 합니다.<br />
+							</p>
+							<ul class="skill-list wowrap">
+								<li class="item wow fadeInUp">
+									<div class="text">#HTML5</div>
+								</li>
+								<li class="item wow fadeInUp">
+									<div class="text">#CSS3</div>
+								</li>
+								<li class="item wow fadeInUp">
+									<div class="text">#SCSS</div>
+								</li>
+								<li class="item wow fadeInUp">
+									<div class="text">#Javascript(ES6+)</div>
+								</li>
+								<li class="item wow fadeInUp">
+									<div class="text">#JQuery</div>
+								</li>
+								<li class="item wow fadeInUp">
+									<div class="text">#Zeplin</div>
+								</li>
+								<li class="item wow fadeInUp">
+									<div class="text">#PHP</div>
+								</li>
+								<li class="item wow fadeInUp">
+									<div class="text">#Photoshop</div>
+								</li>
+								<li class="item wow fadeInUp">
+									<div class="text">#Illustrator</div>
+								</li>
+							</ul>
 						</div>
 					</div>
 					<ul class="skill-list wowrap">
@@ -44,50 +75,28 @@
 			<!-- S : section-work -->
 			<section class="section section-work">
 				<div class="container">
-					<div class="about-flex">
-						<div class="about-img">
-							<img src="" alt="" />
-						</div>
-						<div class="about-text">
-							<p class="about-des"></p>
-						</div>
-					</div>
-					<ul class="skill-list">
-						<li class="item">
-							<div class="text">#HTML5</div>
-						</li>
-						<li class="item">
-							<div class="text">#CSS3</div>
-						</li>
-						<li class="item">
-							<div class="text">#SCSS</div>
-						</li>
-						<li class="item">
-							<div class="text">#Javascript(ES6+)</div>
-						</li>
-						<li class="item">
-							<div class="text">#JQuery</div>
-						</li>
-						<li class="item">
-							<div class="text">#Zeplin</div>
-						</li>
-						<li class="item">
-							<div class="text">#PHP</div>
-						</li>
-						<li class="item">
-							<div class="text">#Photoshop</div>
-						</li>
-						<li class="item">
-							<div class="text">#Illustrator</div>
-						</li>
-					</ul>
+					<!-- 롯데스위트파크
+					요거프레소
+					굿피플
+					멘야하나비
+					아람인더스트리
+					라진플로베
+					윈스 (서브페이지)
+					특허법인 무한 -->
 				</div>
 			</section>
 			<!-- E : section-work -->
 
 			<!-- S : section-contact -->
 			<section class="section section-contact">
-				<div class="container"></div>
+				<div class="container">
+					<div class="contact-flex">
+						<div class="contact-text wow fadeInLeft">
+							<h2 class="title">Contact</h2>
+							<p class="contact-des">감사합니다</p>
+						</div>
+					</div>
+				</div>
 			</section>
 			<!-- E : section-contact -->
 		</main>
@@ -96,7 +105,7 @@
 		<? include "../include/js.html" ?>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
-		<script>
+		<!-- <script>
 			gsap.registerPlugin(ScrollTrigger);
 
 			gsap.timeline({
@@ -113,6 +122,6 @@
 					},
 				},
 			});
-		</script>
+		</script> -->
 	</body>
 </html>

@@ -6,13 +6,17 @@
 
 <header id="header" class="header">
 	<div class="container header-wrap">
-		<a href="../main/main.html" class="logo d-inline-flex align-items-center h-100" title="메인으로">
+		<a href="../main/main.html" class="logo" title="메인으로">
 			<img src="../assets/images/main/logo.png" alt="<?=$SS[sitename]?>" />
 		</a>
-		<div class="nav__bg"></div>
 		<!-- S : navigation -->
 		<nav class="nav">
-			<? include "../include/nav.html" ?>
+			<ul class="nav-list">
+				<li class="nav-list__item"><a href="#none" class="link">Home</a></li>
+				<li class="nav-list__item"><a href="#none" class="link">About me</a></li>
+				<li class="nav-list__item"><a href="#none" class="link">Work</a></li>
+				<li class="nav-list__item"><a href="#none" class="link">Contact</a></li>
+			</ul>
 		</nav>
 		<!-- E : navigation -->
 		<button class="nav-mobile__btn" type="button">

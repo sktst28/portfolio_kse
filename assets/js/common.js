@@ -1,14 +1,5 @@
 'use strict';
 
-/* 
-  퍼블팀 js 파일입니다. 
-  
-  ※ 퍼블팀 외에 수정금지
-  개발에서 필요한 부분은 dev.js 파일에 작업 부탁드리며, 
-  common.js에서 삭제 필요한 부분은 퍼블팀에 따로 전달 부탁드립니다.
-  
-*/
-
 
 /* 모달팝업 */
 var startPop = function() {
@@ -31,105 +22,7 @@ $(window).on('load', function(){
 }); 
 
 
-/* GNB */
-/*
-var gnbdrop = {
-  init: function () {
-    // this.gnbdrop_all(); //모든 2depth+배경 노출
-    // this.gnbdrop_box(); //호버한 1depth>link의 2depth 박스형태로 노출
-    // this.gnbdrop_line(); //호버한 1depth>link의 2depth + 배경이 노출
-  },
-  gnbdrop_all: function () {
-    //모든 2depth+배경 노출
-    var $nav_bg = $('.nav__bg'),
-    // $header = $('.header'),
-      $nav_link = $('.header .nav .depth-1').children('.link'),
-      $nav_drop = $('.header .nav .nav-list--depth2');
 
-      $('.header .nav').each(function () {
-        var maxHeight = 0;
-
-        $(this)
-        .find('.nav-list--depth2')
-        .each(function () {
-          if ($(this).outerHeight() > maxHeight) {
-            maxHeight = $(this).outerHeight();
-          }
-        });
-
-        $nav_bg.height(maxHeight);
-
-        $(this)
-        .find($nav_link)
-        .each(function (index) {
-          $(this).on('mouseover focus', function () {
-            // $header.addClass('hover');
-            $nav_bg.stop(false,true).fadeIn(200,"linear"); //slideDown(200);
-            $nav_drop.stop(false,true).fadeIn(200,"linear"); //slideDown(200);
-          });
-        });
-
-      $('.header').on('mouseleave', function () {
-        // $header.removeClass('hover');
-        $nav_drop.stop(false,true).fadeOut(200,"linear"); //slideUp(200);
-        $nav_bg.stop(false,true).fadeOut(200,"linear"); //slideUp(200);
-        });
-      });
-  },
-
-  gnbdrop_box: function () {
-    //호버한 1depth>link의 2depth 박스형태로 노출
-    var $nav_link = $('.header .nav .depth-1').children('.link'),
-      $nav_drop = $('.header .nav .nav-list--depth2');
-    $('.header .nav').each(function () {
-      $(this)
-        .find($nav_link)
-        .each(function (index) {
-          $(this).on('mouseover focus', function () {
-            if ($(this).next().length > 0) {
-              $nav_drop.stop(false, true).fadeOut(100);//slideUp();
-              $(this).next().stop(false, true).fadeIn(100);//slideDown();
-            } else {
-              $nav_drop.stop(false, true).fadeOut(100);//slideUp();
-            }
-          });
-        });
-      $(this).on('mouseleave', function () {
-        $nav_drop.stop(false, true).fadeOut(100);//slideUp();
-      });
-    });
-  },
-
-  gnbdrop_line: function () {
-    //호버한 1depth>link의 2depth + 배경이 노출
-    var $nav_bg = $('.nav__bg'),
-      $nav_link = $('.depth-1').children('.link'),
-      $nav_drop = $('.nav-list--depth2');
-    $('.header .nav').each(function () {
-      var $nav_bg_height = $nav_drop.innerHeight();
-      $nav_bg.height($nav_bg_height);
-      $(this)
-        .find($nav_link)
-        .each(function (index) {
-          $(this).on('mouseover focus', function () {
-            if ($(this).next().length > 0) {
-              $nav_drop.stop(false, true).hide();
-              $nav_bg.stop(false, true).show();
-              $(this).next().stop(false, true).css('display','flex');//show();
-            } else {
-              $nav_drop.stop(false, true).hide();
-              $nav_bg.stop(false, true).hide();
-            }
-          });
-        });
-      $(this).on('mouseleave', function () {
-        $nav_drop.stop(false, true).hide();
-        $nav_bg.stop(false, true).hide();
-      });
-    });
-  },
-};
-*/
 
 /* 모바일 네비게이션 */
 var navMobile = {
@@ -395,29 +288,6 @@ $(document).ready(function () {
     },
   });
 
-  /* HEADER GNB Drop */
-  $('.header').navDrop({
-    type: 'all', // 기본값 udnefiend, 선언하지 않거나 없는 값을 선언할 경우 콘솔창에 경고문구 출력
-    background: true, // 기본값 true, 배경 엘리먼트가 없을 경우 콘솔창에 경고문구 출력
-    backgroundClass: '.nav__bg', // 기본값 .nav__bg
-    backgroundAutoColor: false, // 기본값 false, depth2의 배경색을 자동으로 적용
-    effect: 'fade', // 기본값 fade, 옵션값은 fade, slide
-    delay: 200, // 출력시 delay
-    callback: function () {}, // 콜백 함수
-  });
-
-  /* 
-    이미지맵 제작 추천 : https://www.image-map.net/
-    이미지맵 반응형 작업 시 선언
-    $('img[usemap]').rwdImageMaps();
-  */
-
-  /* 
-  $('[data-track]').scrollTrack({
-    threshold: 0, // // 임계치 ( * 상단 고정영역 높이 )
-    activeClass: 'active', // 활성 클래스 네이밍 (기본값 : active)
-  });
-  */
 
     /**
  * qna

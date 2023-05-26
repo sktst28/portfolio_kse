@@ -5580,6 +5580,10 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .skip .link {
   text-indent: -9999px;
   font-size: 0;

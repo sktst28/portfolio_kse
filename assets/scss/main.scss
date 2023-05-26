@@ -5,7 +5,6 @@
 
 body {
 	//background-color: #f9f9f9;
-	background-color: #ffffff;
 	color: #1b191c;
 }
 
@@ -38,6 +37,29 @@ body {
 }
 
 .section-intro {
+	.intro-bx {
+		display: flex;
+		flex-direction: column;
+		justify-content: stretch;
+	}
+	.intro-text {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(20);
+	}
+	.text {
+		display: inline-block;
+		background-color: #f4f80a;
+		border-radius: 50px;
+		padding: rem(5) rem(20);
+		font-size: em(50);
+		font-weight: 900;
+	}
+	.icon {
+		img {
+			width: rem(130);
+		}
+	}
 }
 
 .section-about {

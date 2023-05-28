@@ -1,1 +1,11 @@
 @charset "UTF-8";
+
+.container {
+	max-width: rem(1400);
+	margin: 0 auto;
+	width: 100%;
+}
+
+.text-right {
+	text-align: right;
+}

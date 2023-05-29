@@ -15,13 +15,17 @@
 					<div class="intro-bx">
 						<div class="intro-bx__item">
 							<div class="intro-text">
-								<span class="text">Welcome</span>
-								<span class="icon icon-hi">
+								<div class="data-text" id="data-text">
+									<div aria-label="Welcome" data-splitting="">Welcome</div>
+								</div>
+								<span class="icon icon-hi" id="hi">
 									<img src="../assets/images/main/hi_i.png" alt="손 흔드는 아이콘" />
 								</span>
 							</div>
 							<div class="intro-text">
-								<span class="text highlight">Kimseoeun's</span>
+								<div class="data-text">
+									<div aria-label="Kimseoeun's" data-splitting="">Kimseoeun's</div>
+								</div>
 							</div>
 						</div>
 						<div class="intro-bx__item">
@@ -94,8 +98,8 @@
 			<!-- S : section-work -->
 			<section class="section section-work">
 				<div class="container">
-					<ul class="work-list">
-						<li class="work-list__item">
+					<ul class="work-list wowrap">
+						<li class="work-list__item wow fadeInUp">
 							<a href="" target="_blank" title="롯데스위트파크">
 								<div class="img-bx">
 									<img src="../assets/images/main/lotte_sweetpark.jpg" alt="롯데스위트파크" />
@@ -108,10 +112,10 @@
 								</div>
 							</a>
 						</li>
-						<li class="work-list__item">
+						<li class="work-list__item wow fadeInUp">
 							<a href="" target="_blank" title="롯데스위트파크">
 								<div class="img-bx">
-									<img src="../assets/images/main/lotte_sweetpark.jpg" alt="롯데스위트파크" />
+									<img src="../assets/images/main/goodpeople.jpg" alt="굿피플" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">롯데스위트파크</div>
@@ -121,10 +125,10 @@
 								</div>
 							</a>
 						</li>
-						<li class="work-list__item">
-							<a href="" target="_blank" title="롯데스위트파크">
+						<li class="work-list__item wow fadeInUp">
+							<a href="" target="_blank" title="굿피플">
 								<div class="img-bx">
-									<img src="../assets/images/main/lotte_sweetpark.jpg" alt="롯데스위트파크" />
+									<img src="../assets/images/main/wins.jpg" alt="윈스" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">롯데스위트파크</div>
@@ -134,10 +138,10 @@
 								</div>
 							</a>
 						</li>
-						<li class="work-list__item">
+						<li class="work-list__item wow fadeInUp">
 							<a href="" target="_blank" title="롯데스위트파크">
 								<div class="img-bx">
-									<img src="../assets/images/main/lotte_sweetpark.jpg" alt="롯데스위트파크" />
+									<img src="../assets/images/main/yoger.jpg" alt="요거프레소" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">롯데스위트파크</div>
@@ -147,33 +151,34 @@
 								</div>
 							</a>
 						</li>
-						<li class="work-list__item">
-							<a href="" target="_blank" title="롯데스위트파크">
+						<li class="work-list__item wow fadeInUp">
+							<a href="" target="_blank" title="아람인더스트리">
 								<div class="img-bx">
-									<img src="../assets/images/main/lotte_sweetpark.jpg" alt="롯데스위트파크" />
+									<img src="../assets/images/main/arindustry.jpg" alt="아람인더스트리" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">롯데스위트파크</div>
-									<p class="type">기업 홈페이지</p>
+									<p class="type">쇼핑몰 홈페이지</p>
 									<p class="type">#반응형</p>
 									<p class="type">#기간 3주</p>
 								</div>
 							</a>
 						</li>
-						<li class="work-list__item">
-							<a href="" target="_blank" title="롯데스위트파크">
+						<li class="work-list__item wow fadeInUp">
+							<a href="" target="_blank" title="모락스">
 								<div class="img-bx">
-									<img src="../assets/images/main/lotte_sweetpark.jpg" alt="롯데스위트파크" />
+									<img src="../assets/images/main/molax.jpg" alt="모락스" />
 								</div>
 								<div class="txt-bx">
-									<div class="tit">롯데스위트파크</div>
-									<p class="type">기업 홈페이지</p>
+									<div class="tit">모락스</div>
+									<p class="type">기업 & 예약 홈페이지</p>
 									<p class="type">#반응형</p>
 									<p class="type">#기간 3주</p>
 								</div>
 							</a>
 						</li>
 					</ul>
+					<a href="../work/work.html" class="more-btn"> 더보기 <i class="xi-plus"></i> </a>
 				</div>
 			</section>
 			<!-- E : section-work -->
@@ -213,5 +218,15 @@
 
 		<? include "../include/footer.html" ?>
 		<? include "../include/js.html" ?>
+		<script>
+			window.onload = function () {
+				const iconHi = document.getElementById('hi');
+				iconHi.style.visibility = 'visible';
+			};
+
+			$(function () {
+				Splitting();
+			});
+		</script>
 	</body>
 </html>

@@ -5579,6 +5579,9 @@ button.swiper-pagination-bullet {
   margin: 0 auto;
   width: 100%;
 }
+.container-wide {
+  max-width: 87.5rem;
+}
 
 .text-right {
   text-align: right;

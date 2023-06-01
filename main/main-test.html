@@ -1,0 +1,187 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<? include "../include/meta.html" ?>
+		<link rel="stylesheet" href="../assets/css/main2.min.css" />
+		<style>
+			.file_bx {
+				position: relative;
+				border: 1px solid #ddd;
+				width: 62.5rem;
+				height: 25rem;
+				margin-bottom: 3.75rem;
+			}
+			.file_bx p {
+				height: 2.5rem;
+				line-height: 2.5rem;
+			}
+			.file_bx .btn_file_type {
+				background: #302e2f;
+				color: #fff;
+				border: 0;
+				display: block;
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				color: #fff;
+				background: #999;
+				font-weight: 300;
+				text-align: center;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				cursor: pointer;
+			}
+			.file_bx input {
+				z-index: 2;
+				position: absolute;
+				width: 102px;
+				height: 50px;
+				left: 0;
+				bottom: 0;
+				opacity: 0;
+				filter: alpha(opacity=0);
+				cursor: pointer;
+				-webkit-appearance: none;
+			}
+			.file_bx .text {
+				font-size: 14px;
+				color: #666666;
+			}
+			.file_bx .text:first-of-type {
+				margin-top: 5px;
+			}
+
+			#file-list {
+				width: 46.25rem;
+				height: 15.625rem;
+				border: 1px solid #ddd;
+			}
+			#file-list .empty-list-item {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				height: 15.625rem;
+			}
+			#file-list li {
+				display: flex;
+				align-items: center;
+			}
+			#file-list button {
+				font-size: 13px;
+				height: 20px;
+				line-height: 20px;
+				margin-left: 10px;
+			}
+		</style>
+	</head>
+	<body class="main-body">
+		<? include "../include/header.html" ?>
+
+		<main class="main" id="contents">
+			<section class="section">
+				<div class="container">
+					<form action="" method="POST">
+						<div class="file_bx">
+							<ul id="file-list">
+								<li class="empty-list-item">Ctrl + 클릭으로 여러개의 이미지를 한번에 등록하세요.</li>
+							</ul>
+							<div class="text">*등록된 이미지가 대표이미지로 노출되니다.</div>
+							<div class="text">*이미지는 최소 1장 이상 등록해야합니다.</div>
+							<span class="btn_file_type">다중등록</span>
+							<input id="files-input" type="file" multiple="multiple" onchange="handleFileSelect(event)" />
+						</div>
+					</form>
+				</div>
+			</section>
+
+			<section class="sec-2">
+				<div class="container">
+					<div class="text">
+						<div data-splitting>framers</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<script src="../assets/js/lib/splitting.min.js"></script>
+		<script src="../assets/js/lib/splitting-lite.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+		<script src="https://codepen.io/shshaw/pen/QmZYMG.js"></script>
+
+		<script>
+			function handleFileSelect(event) {
+				var files = event.target.files;
+				var fileList = document.getElementById('file-list');
+				//fileList.innerHTML = ''; // 이전 파일 목록을 지우고 다시 생성
+
+				var emptyListItem = document.querySelector('.empty-list-item');
+				if (emptyListItem) {
+					emptyListItem.parentNode.removeChild(emptyListItem); // '이미지를 첨부해주세요' 문구 삭제
+				}
+
+				// 최대 6개까지만 파일 추가
+				if (files.length + fileList.children.length > 6) {
+					alert('파일은 최대 6개까지만 등록할 수 있습니다.');
+					return;
+				}
+
+				for (var i = 0; i < files.length; i++) {
+					var file = files[i];
+					var listItem = document.createElement('li');
+					var fileText = document.createElement('p');
+					fileText.className = 'file-text';
+					fileText.textContent = file.name;
+					listItem.appendChild(fileText);
+
+					var deleteButton = document.createElement('button'),
+						deleteIcon = document.createElement('i');
+					deleteButton.className = 'file-delete-button';
+					deleteIcon.className = 'xi-close';
+					deleteButton.appendChild(deleteIcon);
+					deleteButton.setAttribute('data-index', i); // 삭제 버튼의 인덱스 설정
+					deleteButton.addEventListener('click', deleteFile.bind(null, listItem, i)); // 삭제 버튼 클릭 시 해당 li 요소와 인덱스 전달
+					listItem.appendChild(deleteButton);
+
+					fileList.appendChild(listItem);
+				}
+			}
+
+			function deleteFile(listItem, index) {
+				listItem.parentNode.removeChild(listItem); // 해당 li 요소 삭제
+
+				var filesInput = document.getElementById('files-input');
+				var files = Array.from(filesInput.files); // FileList를 배열로 변환
+				files.splice(index, 1); // 해당 인덱스의 파일 데이터 삭제
+				var newFileList = new DataTransfer(); // 새로운 파일 목록을 생성
+				for (var i = 0; i < files.length; i++) {
+					newFileList.items.add(files[i]); // 파일 목록에 파일 추가
+				}
+				filesInput.files = newFileList.files; // 수정된 파일 목록으로 업데이트
+
+				if (files.length === 0) {
+					var fileList = document.getElementById('file-list');
+					var emptyListItem = document.createElement('li');
+					emptyListItem.className = 'empty-list-item';
+					emptyListItem.textContent = '이미지를 첨부해주세요';
+					fileList.appendChild(emptyListItem); // '이미지를 첨부해주세요' 문구 다시 추가
+				}
+			}
+		</script>
+
+		<script>
+			Splitting();
+
+			/* ---------------------------------- */
+
+			var lr = document.querySelector('[data-splitting]');
+			window.addEventListener('load', () => {
+				var newone = lr.cloneNode(true);
+				lr.parentNode.replaceChild(newone, lr);
+				lr = newone;
+			});
+		</script>
+	</body>
+</html>

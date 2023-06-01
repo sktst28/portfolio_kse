@@ -6,11 +6,10 @@
 		<link rel="stylesheet" href="../assets/css/main.min.css" />
 	</head>
 	<body class="main-body">
-		<? include "../include/header.html" ?>
-
 		<main class="main" id="contents">
+			<div class="cover"></div>
 			<!-- S : section-intro -->
-			<section class="section section-intro">
+			<section class="section section-intro" id="sec-intro">
 				<div class="container">
 					<div class="intro-bx">
 						<div class="intro-bx__item">
@@ -18,9 +17,9 @@
 								<div class="data-text" id="data-text">
 									<div aria-label="Welcome" data-splitting="">Welcome</div>
 								</div>
-								<span class="icon icon-hi" id="hi">
+								<!-- 			<span class="icon icon-hi" id="hi">
 									<img src="../assets/images/main/hi_i.png" alt="손 흔드는 아이콘" />
-								</span>
+								</span> -->
 							</div>
 							<div class="intro-text">
 								<div class="data-text">
@@ -28,25 +27,25 @@
 								</div>
 							</div>
 						</div>
-						<!-- 	<div class="intro-bx__item">
+						<div class="intro-bx__item">
 							<div class="intro-text text-right">
 								<span class="text highlight">Web Publisher</span>
-								<span class="icon">
+								<!-- 		<span class="icon">
 									<img src="../assets/images/main/technologist_i.png" alt="여자 아이콘" />
-								</span>
+								</span> -->
 							</div>
 							<div class="intro-text">
 								<span class="text portfolio">Portfolio</span>
-								<span class="icon icon-down"><img src="../assets/images/main/down_i.png" alt="여자 아이콘" /></span>
+								<!-- 	<span class="icon icon-down"><img src="../assets/images/main/down_i.png" alt="여자 아이콘" /></span> -->
 							</div>
-						</div> -->
+						</div>
 					</div>
 				</div>
 			</section>
 			<!-- E : section-intro -->
 
 			<!-- S : section-about -->
-			<section class="section section-about">
+			<section class="section section-about" id="sec-about">
 				<div class="container">
 					<div class="about-flex">
 						<div class="about-img wow fadeInLeft">
@@ -59,7 +58,6 @@
 								1년 6개월차 웹 퍼블리셔 김서은 입니다!
 							</h3>
 							<p class="about-des">
-								즐겁고 흥미로운 웹 사이트를 구현하는 1년 6개월차 웹 퍼블리셔 김서은입니다.<br />
 								CSS와 Javascript를 이용해 모션을 주고 동적인 화면을 구사하는 것을 좋아하며,<br />
 								화면에 보여지는 것 뿐만 아니라 어떻게하면 운영과 유지보수, 개발에 효율적일지 늘 고민하며 시맨틱 마크업을 합니다.<br />
 								웹 에이전시에서 퍼블리셔로 일을하며 다양한 홈페이지를 경험하였습니다.<br />
@@ -98,14 +96,14 @@
 			<!-- E : section-about -->
 
 			<!-- S : section-work -->
-			<section class="section section-work">
+			<section class="section section-work" id="sec-work">
 				<div class="container">
-					<h2 class="data-text data-text--st2">
+					<!-- <h2 class="data-text data-text--st2">
 						<span data-splitting="chars">Work</span>
-					</h2>
+					</h2> -->
 					<ul class="work-list wowrap">
 						<li class="work-list__item wow fadeInUp">
-							<a href="devsweet.lotternd.com" target="_blank" title="롯데스위트파크">
+							<a href="http://devsweet.lotternd.com" target="_blank" title="롯데스위트파크">
 								<div class="img-bx">
 									<img src="../assets/images/main/sweetpark.jpg" alt="롯데스위트파크" />
 								</div>
@@ -152,7 +150,7 @@
 							</a>
 						</li>
 						<li class="work-list__item wow fadeInUp">
-							<a href="www.yogerpresso.co.kr" target="_blank" title="요거프레소">
+							<a href="http://yogerpresso.co.kr" target="_blank" title="요거프레소">
 								<div class="img-bx">
 									<img src="../assets/images/main/yoger.jpg" alt="요거프레소" />
 								</div>
@@ -183,7 +181,7 @@
 							</a>
 						</li>
 						<li class="work-list__item wow fadeInUp">
-							<a href="igdoor.co.kr" target="_blank" title="명성아이지">
+							<a href="http://igdoor.co.kr" target="_blank" title="명성아이지">
 								<div class="img-bx">
 									<img src="../assets/images/main/igdoor.jpg" alt="명성아이지" />
 								</div>
@@ -199,7 +197,7 @@
 							</a>
 						</li>
 						<li class="work-list__item wow fadeInUp">
-							<a href="eco-ari.com" target="_blank" title="아람인더스트리">
+							<a href="http://eco-ari.com" target="_blank" title="아람인더스트리">
 								<div class="img-bx">
 									<img src="../assets/images/main/arindustry.jpg" alt="아람인더스트리" />
 								</div>
@@ -215,7 +213,7 @@
 							</a>
 						</li>
 						<li class="work-list__item wow fadeInUp">
-							<a href="ksgdw.com" target="_blank" title="ks벽지">
+							<a href="http://ksgdw.com" target="_blank" title="ks벽지">
 								<div class="img-bx">
 									<img src="../assets/images/main/ksgdw.jpg" alt="ks벽지" />
 								</div>
@@ -230,7 +228,7 @@
 							</a>
 						</li>
 						<li class="work-list__item wow fadeInUp">
-							<a href="molax.co.kr" target="_blank" title="모락스">
+							<a href="http://molax.co.kr" target="_blank" title="모락스">
 								<div class="img-bx">
 									<img src="../assets/images/main/molax.jpg" alt="모락스" />
 								</div>
@@ -247,7 +245,7 @@
 							</a>
 						</li>
 						<li class="work-list__item wow fadeInUp">
-							<a href="djyc.or.kr" target="_blank" title="동작청소년문화의집">
+							<a href="http://djyc.or.kr" target="_blank" title="동작청소년문화의집">
 								<div class="img-bx">
 									<img src="../assets/images/main/djyc.jpg" alt="동작청소년문화의집" />
 								</div>
@@ -262,9 +260,9 @@
 							</a>
 						</li>
 						<li class="work-list__item wow fadeInUp">
-							<a href="ohchanggo.com" target="_blank" title="오창고">
+							<a href="http://ohchanggo.com" target="_blank" title="오창고">
 								<div class="img-bx">
-									<img src="../assets/images/main/elchemtech.jpg" alt="오창고" />
+									<img src="../assets/images/main/ohchanggo.jpg" alt="오창고" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">오창고</div>
@@ -278,9 +276,9 @@
 							</a>
 						</li>
 						<li class="work-list__item wow fadeInUp">
-							<a href="elchemtech.com" target="_blank" title="엘켐텍">
+							<a href="http://elchemtech.com" target="_blank" title="엘켐텍">
 								<div class="img-bx">
-									<img src="../assets/images/main/ohchanggo.jpg" alt="엘켐텍" />
+									<img src="../assets/images/main/elchemtech.jpg" alt="엘켐텍" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">엘켐텍</div>
@@ -299,7 +297,7 @@
 			<!-- E : section-work -->
 
 			<!-- S : section-contact -->
-			<section class="section section-contact" id="contact">
+			<section class="section section-contact" id="sec-contact">
 				<div class="container">
 					<div class="data-text data-text--st2">
 						<span data-splitting="chars">Thank you</span>
@@ -345,12 +343,14 @@
 
 		<? include "../include/js.html" ?>
 		<script>
-			window.onload = function () {
+			// 윈도우 로드 시 실행할 이벤트 핸들러 등록
+			window.addEventListener('load', function () {
 				$(function () {
 					Splitting();
 				});
-			};
+			});
 
+			//work 더보기 스크립트
 			$(function () {
 				$('.work-list__item').slice(0, 4).show(); // 최초 10개 선택
 				console.log($('.work-list__item').length);
@@ -366,23 +366,30 @@
 				});
 			});
 
-			// 스크롤 이벤트 리스너 추가
-			window.addEventListener('scroll', function () {
-				// 애니메이션을 트리거할 위치 계산 (여기에서는 50% 스크롤된 경우)
-				var triggerPosition = document.getElementById('contact').innerHeight;
-				console.log(triggerPosition);
+			$(function () {
+				$(window).scroll(function () {
+					if ($(this).scrollTop() >= $('#sec-work').offset().top - 300) {
+						$('#sec-work').addClass('active');
+					} else {
+						$('#sec-work').removeClass('active');
+					}
 
-				// 현재 스크롤 위치 확인
-				var scrollPosition = window.scrollY || window.pageYOffset;
-
-				// 특정 위치에 도달하면 애니메이션 작동
-				if (scrollPosition > triggerPosition) {
-					// 애니메이션 작동하는 코드 추가
-					// 예: 요소에 클래스 추가하기
-					var element = document.getElementById('contact');
-					element.classList.add('active');
-				}
+					if ($(this).scrollTop() >= $('#sec-contact').offset().top - 500) {
+						$('#sec-work').removeClass('active');
+					}
+				});
 			});
+
+			var element = document.getElementById('sec-intro'); //추가될 요소
+			var classToAdd = 'active'; // 추가할 클래스
+
+			// 애니메이션 종료 이벤트를 처리하는 함수를 정의
+			function handleAnimationEnd() {
+				element.classList.add(classToAdd); // 클래스 추가
+			}
+
+			// 애니메이션 종료 이벤트를 수신하여 handleAnimationEnd 함수를 호출
+			element.addEventListener('animationend', handleAnimationEnd);
 		</script>
 	</body>
 </html>

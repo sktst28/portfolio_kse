@@ -58,21 +58,22 @@
   }
 }
 body {
-  color: #1b191c;
+  background-color: #323232;
+  color: #f2f2f2;
 }
 
-/* .cover {
-	background: #e7e7e7;
-	z-index: 9999999;
-	position: fixed;
-	top: 0%;
-	left: -25%;
-	width: 150%;
-	height: 100%;
-	transform-origin: left;
+.cover {
+  background: #e7e7e7;
+  z-index: 9999999;
+  position: fixed;
+  top: 0%;
+  left: -25%;
+  width: 150%;
+  height: 100%;
+  transform-origin: left;
+  animation: coverleft 2000ms both cubic-bezier(0.77, 0, 0.175, 1);
+}
 
-	animation: coverleft 2000ms both cubic-bezier(0.77, 0, 0.175, 1);
-} */
 /* 공통 섹션 */
 .section {
   padding: 10vh 0;
@@ -98,8 +99,8 @@ body {
   font-size: 1.125rem;
   font-weight: 500;
   color: #fff;
-  border: 1px solid #fccc00;
-  background-color: #fccc00;
+  border: 1px solid #ff8141;
+  background-color: #ff8141;
   border-radius: 20px;
   padding: 0.3125rem 0.9375rem;
 }
@@ -133,6 +134,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 1.25rem;
+  letter-spacing: -2px;
 }
 .section-intro .text {
   display: inline-block;
@@ -161,12 +163,9 @@ body {
   display: inline-block;
   font-size: 6vw;
   font-weight: 700;
-  animation: slide-in 3s cubic-bezier(0.5, 0, 0.5, 1) both;
-  animation-delay: calc(60ms * var(--char-index));
 }
 .section-intro .icon {
   margin-left: 2vw;
-  opacity: 0;
 }
 .section-intro .icon-hi {
   animation: tossing 1.5s infinite both;
@@ -179,6 +178,12 @@ body {
   top: 0;
   right: 0;
   animation: UpDown 0.6s linear infinite;
+  animation-delay: 0.6s;
+}
+.section-intro.active .data-text .char {
+  animation: slide-in 3s cubic-bezier(0.5, 0, 0.5, 1) both;
+  animation-delay: calc(60ms * var(--char-index));
+  animation-delay: 0.5s;
 }
 
 /* 소개 섹션 */
@@ -205,6 +210,9 @@ body {
 }
 
 /* 포트폴리오 섹션 */
+.section-work {
+  position: relative;
+}
 .section-work .data-text--st2 {
   font-size: 6vw;
   margin-bottom: 1.875rem;
@@ -295,6 +303,19 @@ body {
   font-weight: 600;
   border: 1px solid #ddd;
   border-radius: 50px;
+}
+.section-work.active::before {
+  content: "My portfolio";
+  display: block;
+  font-size: 9.375rem;
+  font-weight: 700;
+  color: #d9d9d9;
+  opacity: 0.5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 /* 컨택 섹션 */

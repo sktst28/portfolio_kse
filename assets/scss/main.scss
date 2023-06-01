@@ -94,11 +94,13 @@
 }
 
 body {
-	//background-color: #f9f9f9;
-	color: #1b191c;
+	//background-color: #252525;
+	background-color: #323232;
+	color: #f2f2f2;
+	//color: #e3e3e3;
 }
 
-/* .cover {
+.cover {
 	background: #e7e7e7;
 	z-index: 9999999;
 	position: fixed;
@@ -109,7 +111,7 @@ body {
 	transform-origin: left;
 
 	animation: coverleft 2000ms both cubic-bezier(0.77, 0, 0.175, 1);
-} */
+}
 
 /* 공통 섹션 */
 .section {
@@ -179,6 +181,7 @@ body {
 		display: flex;
 		align-items: center;
 		margin-bottom: rem(20);
+		letter-spacing: -2px;
 	}
 	.text {
 		display: inline-block;
@@ -211,12 +214,9 @@ body {
 		display: inline-block;
 		font-size: 6vw;
 		font-weight: 700;
-		animation: slide-in 3s cubic-bezier(0.5, 0, 0.5, 1) both;
-		animation-delay: calc(60ms * var(--char-index));
 	}
 	.icon {
 		margin-left: 2vw;
-		opacity: 0;
 
 		&-hi {
 			animation: tossing 1.5s infinite both;
@@ -230,6 +230,15 @@ body {
 			right: 0;
 			-webkit-animation: UpDown 0.6s linear infinite;
 			animation: UpDown 0.6s linear infinite;
+			animation-delay: 0.6s;
+		}
+	}
+
+	&.active {
+		.data-text .char {
+			animation: slide-in 3s cubic-bezier(0.5, 0, 0.5, 1) both;
+			animation-delay: calc(60ms * var(--char-index));
+			animation-delay: 0.5s;
 		}
 	}
 }
@@ -263,6 +272,8 @@ body {
 
 /* 포트폴리오 섹션 */
 .section-work {
+	position: relative;
+
 	.data-text--st2 {
 		font-size: 6vw;
 		margin-bottom: rem(30);
@@ -361,6 +372,22 @@ body {
 		font-weight: 600;
 		border: 1px solid #ddd;
 		border-radius: 50px;
+	}
+
+	&.active {
+		&::before {
+			content: 'My portfolio';
+			display: block;
+			font-size: rem(150);
+			font-weight: 700;
+			color: #d9d9d9;
+			opacity: 0.5;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+		}
 	}
 }
 

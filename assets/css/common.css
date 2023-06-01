@@ -4952,7 +4952,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #fccc00;
+  --swiper-theme-color: #ff8141;
 }
 
 .swiper-container {
@@ -5732,7 +5732,7 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 .nav-mobile .link.active {
-  background-color: #fccc00;
+  background-color: #ff8141;
   color: #fff;
 }
 
@@ -5746,7 +5746,7 @@ button.swiper-pagination-bullet {
 }
 .main-body::-webkit-scrollbar-thumb,
 .sub-body::-webkit-scrollbar-thumb {
-  background: #fccc00;
+  background: #ff8141;
   border-radius: 7px;
 }
 .main-body::-webkit-scrollbar-track,

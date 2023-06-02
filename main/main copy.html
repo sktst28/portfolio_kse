@@ -12,15 +12,21 @@
 			<section class="section section-intro" id="sec-intro">
 				<div class="intro-bx">
 					<div class="container container-wide">
-						<div class="intro-text intro-text-1">
-							<span>Hi, nice</span>
-							<span>to see</span>
-							<span>you here</span>
+						<div class="intro-text">
+							<div class="data-text" id="data-text">
+								<div aria-label="Welcome" data-splitting="">Welcome</div>
+							</div>
+							<span class="icon icon-hi" id="hi">
+								<img src="../assets/images/main/hi_i.png" alt="손 흔드는 아이콘" />
+							</span>
 						</div>
-						<div class="intro-text intro-text-2" id="intro-text-2">
-							<span>This is</span>
-							<span>nice</span>
-							<span>ddddd</span>
+						<div class="intro-text">
+							<!-- 	<div class="data-text">
+										<div aria-label="Kimseoeun's" data-splitting="">Kimseoeun's</div>
+									</div> -->
+							<!-- 		<div class="data-text">
+										<div aria-label="Portfolio" data-splitting="">Portfolio</div>
+									</div> -->
 						</div>
 					</div>
 				</div>
@@ -365,8 +371,7 @@
 
 			window.addEventListener('load', function () {
 				var cover = document.getElementById('cover'),
-					indexSec = document.getElementById('sec-intro'),
-					text2 = document.getElementById('intro-text-2');
+					indexSec = document.getElementById('sec-intro');
 
 				//  애니메이션 실행 코드
 				cover.style.animation = 'coverleft 2000ms both cubic-bezier(0.77, 0, 0.175, 1';
@@ -374,11 +379,6 @@
 				setTimeout(function () {
 					indexSec.classList.add('active');
 				}, 1000);
-
-				text2.addEventListener('animationend', function () {
-					// 애니메이션이 끝난 후 실행될 코드
-					text2.classList.add('on'); // 태그에 CSS 클래스 추가
-				});
 			});
 		</script>
 	</body>

@@ -3,6 +3,8 @@
 @import 'functions';
 @import 'variables';
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* 애니메이션 */
 @keyframes tossing {
 	0% {
@@ -13,18 +15,6 @@
 	}
 	100% {
 		transform: rotate(-2deg);
-	}
-}
-
-@-webkit-keyframes tossing {
-	0% {
-		-webkit-transform: rotate(-2deg);
-	}
-	50% {
-		-webkit-transform: rotate(2deg);
-	}
-	100% {
-		-webkit-transform: rotate(-2deg);
 	}
 }
 
@@ -93,10 +83,59 @@
 	}
 }
 
+@keyframes titleAnimation1 {
+	0% {
+		transform: translateY(-50px);
+		opacity: 0;
+		-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+	}
+	20% {
+		transform: translateY(0);
+		opacity: 1;
+		-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+	}
+	80% {
+		transform: translateY(0);
+		opacity: 1;
+		-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+	}
+	100% {
+		transform: translateY(50px);
+		opacity: 0;
+		-webkit-clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+		clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+	}
+}
+
+@keyframes titleAnimation2 {
+	0% {
+		transform: translateY(-50px);
+		opacity: 0;
+		-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+	}
+	20% {
+		transform: translateY(0);
+		opacity: 1;
+		-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+		-webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+		clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+	}
+}
+
 body {
 	//background-color: #252525;
 	background-color: #323232;
 	color: #f2f2f2;
+	font-family: 'Montserrat', sans-serif;
 	//color: #e3e3e3;
 }
 
@@ -109,8 +148,6 @@ body {
 	width: 150%;
 	height: 100%;
 	transform-origin: left;
-
-	animation: coverleft 2000ms both cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 /* 공통 섹션 */
@@ -139,7 +176,7 @@ body {
 		font-weight: 500;
 		color: #fff;
 		border: 1px solid $color-1;
-		background-color: $color-1;
+		color: $color-1;
 		border-radius: 20px;
 		padding: rem(5) rem(15);
 	}
@@ -165,64 +202,53 @@ body {
 
 /* 인트로 섹션 */
 .section-intro {
+	position: relative;
+	height: 100vh;
 	.intro-bx {
-		&__item {
-			padding-bottom: rem(30);
-			&:nth-of-type(2) {
-				margin-top: 5vw;
-				.intro-text {
-					justify-content: flex-end;
-				}
-			}
-		}
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
 	}
 	.intro-text {
 		position: relative;
-		display: flex;
-		align-items: center;
-		margin-bottom: rem(20);
-		letter-spacing: -2px;
-	}
-	.text {
-		display: inline-block;
-		padding: rem(5) rem(50);
-		font-size: em(80);
-		font-weight: 900;
-		position: relative;
 
-		&.highlight {
-			&::before {
-				content: '';
-				display: inline-block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-color: #f4f80a;
-				border-radius: 60px;
-				z-index: -1;
-				animation: typo_animation 0.6s linear both;
+		width: rem(500);
+		height: rem(500);
+		margin: 0 auto;
+
+		&-2 {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		span {
+			opacity: 0;
+			width: 100%;
+			display: block;
+			font-size: 5vw;
+			font-weight: 600;
+		}
+
+		&.on {
+			span {
+				opacity: 1;
 			}
 		}
-		&.portfolio {
-			margin-right: rem(80);
-		}
 	}
 
-	.data-text .char {
+	/* 	.data-text .char {
 		display: inline-block;
 		font-size: 6vw;
 		font-weight: 700;
-	}
-	.icon {
-		margin-left: 2vw;
+	} */
 
+	.icon {
 		&-hi {
 			animation: tossing 1.5s infinite both;
-			-webkit-animation: tossing 1.5s infinite both;
-			animation-delay: 1s;
-			opacity: 1;
 		}
 		&-down {
 			position: absolute;
@@ -235,10 +261,41 @@ body {
 	}
 
 	&.active {
-		.data-text .char {
-			animation: slide-in 3s cubic-bezier(0.5, 0, 0.5, 1) both;
-			animation-delay: calc(60ms * var(--char-index));
-			animation-delay: 0.5s;
+		.intro-text {
+			span {
+				animation-timing-function: ease;
+				animation-duration: 3s;
+			}
+
+			&-1 {
+				span {
+					animation-name: titleAnimation1;
+					animation-delay: 0.6s;
+					-webkit-animation-fill-mode: forwards;
+
+					&:first-of-type {
+						animation-delay: 0.7s;
+					}
+					&:last-of-type {
+						animation-delay: 0.5s;
+					}
+				}
+			}
+			&-2 {
+				span {
+					animation-name: titleAnimation2;
+					animation-delay: 4.1s;
+					-webkit-animation-fill-mode: backwards;
+
+					&:first-of-type {
+						animation-delay: 4.2s;
+					}
+
+					&:last-of-type {
+						animation-delay: 4s;
+					}
+				}
+			}
 		}
 	}
 }

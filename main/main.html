@@ -1,9 +1,58 @@
-<? include "../include/head.html" ?>
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
-		<? include "../include/meta.html" ?>
+		<meta charset="UTF-8" />
+		<!-- ( < IE10 ) -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!-- Viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<meta name="format-detection" content="telephone=no, address=no, email=no" />
+
+		<!-- 사이트 기본설정 영역 START -->
+		<!-- SEO -->
+		<meta name="title" content="김서은의 포트폴리오" />
+		<meta name="keywords" content="포트폴리오,웹 퍼블리셔" />
+		<meta name="author" content="김서은 웹퍼블리셔 포트폴리오" />
+		<meta name="description" content="김서은의 웹퍼블리셔 포트폴리오" />
+
+		<!-- Open Graph -->
+		<meta property="og:title" content="Seoeun Kim's Portfolio" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="김서은 포트폴리오입니다." />
+		<meta property="og:url" content="" />
+
+		<!-- Twitter -->
+		<meta name="twitter:image" content="<?=$SS[siteimg]?>" />
+		<meta name="twitter:description" content="<?=$SS[sitedescription]?>" />
+		<meta name="twitter:title" content="<?=$SS[sitename]?>" />
+
+		<link rel="image_src" href="<?=$SS[siteimg]?>" />
+		<!-- 대표 이미지 -->
+		<link rel="shortcut icon" href="<?= ($SS[sitefavicon]) ? $SS[sitefavicon] : ''; ?>" />
+		<!-- 파비콘 -->
+		<link rel="canonical" href="<?=$SS[siteurl]?>" />
+
+		<!-- 사이트 기본설정 영역 END -->
+
+		<!-- XEIcon -->
+		<link rel="stylesheet" href="../assets/fonts/icons/xeicon/xeicon.css" />
+
+		<!-- Google Material Icons -->
+		<link rel="stylesheet" href="../assets/fonts/icons/material/material-icons.css" />
+
+		<!-- Bootstrap Icons -->
+		<link rel="stylesheet" href="../assets/fonts/icons/bootstrap/bootstrap-icons.min.css" />
+
+		<!-- Stylesheet -->
+		<link rel="stylesheet" href="../assets/css/common.css" />
 		<link rel="stylesheet" href="../assets/css/main.min.css" />
+
+		<!-- Load jQuery -->
+		<script src="../assets/js/lib/jquery-1.7.1.min.js"></script>
+		<script src="../assets/js/lib/jquery-migrate-1.4.1.min.js"></script>
+
+		<script src="../assets/js/lib/jquery-ui.min.js"></script>
 	</head>
 	<body class="main-body">
 		<main class="main" id="contents">
@@ -18,9 +67,9 @@
 							<span>you here</span>
 						</div>
 						<div class="intro-text intro-text-2" id="intro-text-2">
-							<span>Kimseoeun's</span>
-							<span>Webpublisher</span>
-							<span>portfolio</span>
+							<span>dfsfsd</span>
+							<span>ddddd</span>
+							<span>dfsfsff</span>
 						</div>
 					</div>
 				</div>
@@ -32,7 +81,7 @@
 				<div class="container">
 					<div class="about-flex">
 						<div class="about-img wow fadeInLeft">
-							<img src="../assets/images/main/sample_img.jpg" alt="" />
+							<img src="../assets/images/sample_img.jpg" alt="" />
 						</div>
 						<div class="about-text wow fadeInRight">
 							<h3 class="about-tit">
@@ -86,7 +135,7 @@
 						<li class="work-list__item wow fadeInUp">
 							<a href="http://devsweet.lotternd.com" target="_blank" title="롯데스위트파크">
 								<div class="img-bx">
-									<img src="../assets/images/main/sweetpark.jpg" alt="롯데스위트파크" />
+									<img src="../assets/images/sweetpark.jpg" alt="롯데스위트파크" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">롯데스위트파크</div>
@@ -102,7 +151,7 @@
 						<li class="work-list__item wow fadeInUp">
 							<a href="http://www.goodpeople.or.kr" target="_blank" title="굿피플">
 								<div class="img-bx">
-									<img src="../assets/images/main/goodpeople.jpg" alt="굿피플" />
+									<img src="../assets/images/goodpeople.jpg" alt="굿피플" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">굿피플</div>
@@ -117,7 +166,7 @@
 						<li class="work-list__item wow fadeInUp">
 							<a href="https://www.wins21.com/kor/company/intro__overview.html" target="_blank" title="윈스">
 								<div class="img-bx">
-									<img src="../assets/images/main/wins.jpg" alt="윈스" />
+									<img src="../assets/images/wins.jpg" alt="윈스" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">윈스</div>
@@ -133,7 +182,7 @@
 						<li class="work-list__item wow fadeInUp">
 							<a href="http://yogerpresso.co.kr" target="_blank" title="요거프레소">
 								<div class="img-bx">
-									<img src="../assets/images/main/yoger.jpg" alt="요거프레소" />
+									<img src="../assets/images/yoger.jpg" alt="요거프레소" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">요거프레소</div>
@@ -148,7 +197,7 @@
 						<li class="work-list__item wow fadeInUp">
 							<a href="https://www.eguljak.com/landing_2023/main/main.html" target="_blank" title="걸작떡볶이">
 								<div class="img-bx">
-									<img src="../assets/images/main/guljak.jpg" alt="걸작떡볶이" />
+									<img src="../assets/images/guljak.jpg" alt="걸작떡볶이" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">걸작떡볶이 랜딩페이지</div>
@@ -164,7 +213,7 @@
 						<li class="work-list__item wow fadeInUp">
 							<a href="http://igdoor.co.kr" target="_blank" title="명성아이지">
 								<div class="img-bx">
-									<img src="../assets/images/main/igdoor.jpg" alt="명성아이지" />
+									<img src="../assets/images/igdoor.jpg" alt="명성아이지" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">명성아이지</div>
@@ -180,7 +229,7 @@
 						<li class="work-list__item wow fadeInUp">
 							<a href="http://eco-ari.com" target="_blank" title="아람인더스트리">
 								<div class="img-bx">
-									<img src="../assets/images/main/arindustry.jpg" alt="아람인더스트리" />
+									<img src="../assets/images/arindustry.jpg" alt="아람인더스트리" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">아람인더스트리</div>
@@ -196,7 +245,7 @@
 						<li class="work-list__item wow fadeInUp">
 							<a href="http://ksgdw.com" target="_blank" title="ks벽지">
 								<div class="img-bx">
-									<img src="../assets/images/main/ksgdw.jpg" alt="ks벽지" />
+									<img src="../assets/images/ksgdw.jpg" alt="ks벽지" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">ks벽지</div>
@@ -211,7 +260,7 @@
 						<li class="work-list__item wow fadeInUp">
 							<a href="http://molax.co.kr" target="_blank" title="모락스">
 								<div class="img-bx">
-									<img src="../assets/images/main/molax.jpg" alt="모락스" />
+									<img src="../assets/images/molax.jpg" alt="모락스" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">모락스</div>
@@ -228,7 +277,7 @@
 						<li class="work-list__item wow fadeInUp">
 							<a href="http://djyc.or.kr" target="_blank" title="동작청소년문화의집">
 								<div class="img-bx">
-									<img src="../assets/images/main/djyc.jpg" alt="동작청소년문화의집" />
+									<img src="../assets/images/djyc.jpg" alt="동작청소년문화의집" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">동작청소년문화의집</div>
@@ -243,7 +292,7 @@
 						<li class="work-list__item wow fadeInUp">
 							<a href="http://ohchanggo.com" target="_blank" title="오창고">
 								<div class="img-bx">
-									<img src="../assets/images/main/ohchanggo.jpg" alt="오창고" />
+									<img src="../assets/images/ohchanggo.jpg" alt="오창고" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">오창고</div>
@@ -259,7 +308,7 @@
 						<li class="work-list__item wow fadeInUp">
 							<a href="http://elchemtech.com" target="_blank" title="엘켐텍">
 								<div class="img-bx">
-									<img src="../assets/images/main/elchemtech.jpg" alt="엘켐텍" />
+									<img src="../assets/images/elchemtech.jpg" alt="엘켐텍" />
 								</div>
 								<div class="txt-bx">
 									<div class="tit">엘켐텍</div>
@@ -285,13 +334,13 @@
 					</div>
 					<div class="text" data-aos="fade-up">궁금하신 점이 있으시면 아래로 연락주세요!</div>
 					<div class="icon">
-						<img src="../assets/images/main/hi_i.png" alt="손 흔드는 아이콘" />
+						<img src="../assets/images/hi_i.png" alt="손 흔드는 아이콘" />
 					</div>
 					<div class="contact-list">
 						<div class="contact-list__item wow fadeInLeft" data-wow-duration="1.5s">
 							<div class="txt-bx">
 								<a href="https://open.kakao.com/o/sjJs97mf" target="_blank" class="link">
-									<img src="../assets/images/main/KakaoTalk_kse.png" alt="카카오톡 바로가기" />
+									<img src="../assets/images/KakaoTalk_kse.png" alt="카카오톡 바로가기" />
 								</a>
 								<span class="text">Kakaotalk Openchat</span>
 							</div>
@@ -299,7 +348,7 @@
 						<div class="contact-list__item wow fadeInRight" data-wow-duration="1.5s">
 							<div class="txt-bx">
 								<a href="mailto:sktst28@naver.com" title="이메일 보내기" class="link">
-									<img src="../assets/images/main/email.png" alt="이메일 아이콘" />
+									<img src="../assets/images/email.png" alt="이메일 아이콘" />
 								</a>
 								<span class="text">sktst28@naver.com</span>
 							</div>
@@ -322,7 +371,36 @@
 			<!-- E : footer-->
 		</main>
 
-		<? include "../include/js.html" ?>
+		<script src="../assets/js/lib/popper.min.js"></script>
+		<script src="../assets/js/lib/bootstrap.min.js"></script>
+		<script src="../assets/js/lib/slick.min.js"></script>
+		<script src="../assets/js/lib/wow.min.js"></script>
+		<script src="../assets/js/lib/aos.min.js"></script>
+		<script src="../assets/js/lib/jquery.magnific-popup.min.js"></script>
+		<!-- fullpage에서 scrollOverflow 옵션 사용 시 선언 -->
+		<script src="../assets/js/lib/scrolloverflow.min.js"></script>
+		<!-- css3:false 옵션 적용 후 "linear", "swing" 또는 "easeInOutCubic" 대신 다른 easing 효과 사용 시  선언-->
+		<script src="../assets/js/lib/easings.min.js"></script>
+		<script src="../assets/js/lib/fullpage.min.js"></script>
+		<script src="../assets/js/lib/swiper.min.js"></script>
+		<script src="../assets/js/lib/jquery.scrollbar.min.js"></script>
+		<script src="../assets/js/lib/jquery.mCustomScrollbar.min.js"></script>
+		<!-- <script src="../assets/js/lib/jquery.rwdImageMaps.min.js"></script> 이미지맵 반응형 플러그인 -->
+
+		<!-- 부드러운 스크롤 사용시 주석 해제 -->
+		<script src="../assets/js/lib/SmoothScroll.js"></script>
+
+		<!-- splitting -->
+		<script src="../assets/js/lib/splitting.min.js"></script>
+		<script src="../assets/js/lib/splitting-lite.min.js"></script>
+
+		<!-- gsap -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+
+		<!-- COMMON -->
+		<script src="../assets/js/common.js"></script>
+
 		<script>
 			// 윈도우 로드 시 실행할 이벤트 핸들러 등록
 			window.addEventListener('load', function () {

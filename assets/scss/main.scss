@@ -426,6 +426,7 @@ body {
 	}
 
 	.more-btn {
+		position: relative;
 		display: block;
 		width: rem(200);
 		padding: rem(20) 0;
@@ -435,24 +436,9 @@ body {
 		font-weight: 600;
 		border: 1px solid #ddd;
 		border-radius: 50px;
+		color: #fff;
+		z-index: 50;
 	}
-
-	/* &.active {
-		&::before {
-			content: 'My work';
-			display: block;
-			font-size: rem(150);
-			font-weight: 700;
-			color: #d9d9d9;
-			opacity: 0.2;
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			z-index: -1;
-			transform: 0.2s all;
-		}
-	} */
 }
 
 /* 컨택 섹션 */
@@ -463,6 +449,7 @@ body {
 		margin: rem(25) 0;
 	}
 	.data-text {
+		padding-bottom: rem(30);
 		span {
 			font-size: 5vw;
 		}
@@ -476,7 +463,7 @@ body {
 			padding: 0 rem(40);
 
 			.txt-bx {
-				border: 1px solid #ddd;
+				border: 1px solid #919191;
 				padding: rem(20);
 
 				.link {

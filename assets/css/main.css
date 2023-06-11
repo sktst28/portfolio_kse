@@ -268,22 +268,6 @@ body {
 /* 포트폴리오 섹션 */
 .section-work {
   position: relative;
-  /* &.active {
-  	&::before {
-  		content: 'My work';
-  		display: block;
-  		font-size: rem(150);
-  		font-weight: 700;
-  		color: #d9d9d9;
-  		opacity: 0.2;
-  		position: fixed;
-  		top: 50%;
-  		left: 50%;
-  		transform: translate(-50%, -50%);
-  		z-index: -1;
-  		transform: 0.2s all;
-  	}
-  } */
 }
 .section-work .work-title {
   position: sticky;
@@ -371,6 +355,7 @@ body {
   padding: 0 5px;
 }
 .section-work .more-btn {
+  position: relative;
   display: block;
   width: 12.5rem;
   padding: 1.25rem 0;
@@ -380,6 +365,8 @@ body {
   font-weight: 600;
   border: 1px solid #ddd;
   border-radius: 50px;
+  color: #fff;
+  z-index: 50;
 }
 
 /* 컨택 섹션 */
@@ -388,6 +375,9 @@ body {
 }
 .section-contact .icon {
   margin: 1.5625rem 0;
+}
+.section-contact .data-text {
+  padding-bottom: 1.875rem;
 }
 .section-contact .data-text span {
   font-size: 5vw;
@@ -401,7 +391,7 @@ body {
   padding: 0 2.5rem;
 }
 .section-contact .contact-list__item .txt-bx {
-  border: 1px solid #ddd;
+  border: 1px solid #919191;
   padding: 1.25rem;
 }
 .section-contact .contact-list__item .txt-bx .link {

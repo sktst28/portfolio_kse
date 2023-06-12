@@ -131,10 +131,23 @@
 	}
 }
 
+@keyframes moveLeft {
+	from {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	to {
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+}
+
 body {
 	//background-color: #252525;
-	background-color: #323232;
-	color: #f2f2f2;
+	//background-color: #323232;
+	//color: #f2f2f2;
+	color: #000;
 	font-family: 'Montserrat', sans-serif;
 	//color: #e3e3e3;
 }
@@ -175,8 +188,8 @@ body {
 		font-size: rem(18);
 		font-weight: 500;
 		color: #fff;
-		border: 1px solid $color-1;
-		color: $color-1;
+		border: 2px solid #ddd;
+		color: #000;
 		border-radius: 20px;
 		padding: rem(5) rem(15);
 	}
@@ -204,21 +217,29 @@ body {
 .section-intro {
 	position: relative;
 	height: 100vh;
+	overflow-x: hidden;
+
 	.intro-bx {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 100%;
+		z-index: 2;
 	}
 	.intro-text {
 		position: relative;
-
-		width: rem(500);
-		height: rem(500);
 		margin: 0 auto;
+		z-index: 2;
+
+		&-1 {
+			width: rem(500);
+			height: rem(500);
+		}
 
 		&-2 {
+			width: rem(750);
+			height: rem(600);
 			position: absolute;
 			top: 0;
 			left: 50%;
@@ -230,7 +251,7 @@ body {
 			width: 100%;
 			display: block;
 			font-size: 5vw;
-			font-weight: 600;
+			font-weight: 800;
 		}
 
 		&.on {
@@ -238,6 +259,33 @@ body {
 				opacity: 1;
 			}
 		}
+	}
+
+	.bg-round {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 1px solid #999;
+		border-radius: 20px;
+		width: rem(800);
+		height: rem(700);
+		background-color: #fff;
+		z-index: 1;
+	}
+
+	.bg-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 7vw;
+		font-weight: 700;
+		color: #999;
+		white-space: nowrap;
+		opacity: 0.2;
+		animation: moveLeft 50s infinite linear;
+		z-index: -1;
 	}
 
 	/* 	.data-text .char {
@@ -336,7 +384,8 @@ body {
 		top: 35%;
 		width: 100%;
 		font-size: rem(90);
-		color: #e9e9e9;
+		//color: #e9e9e9;
+		color: #666;
 		opacity: 0.3;
 		font-weight: 700;
 		text-align: center;
@@ -436,7 +485,6 @@ body {
 		font-weight: 600;
 		border: 1px solid #ddd;
 		border-radius: 50px;
-		color: #fff;
 		z-index: 50;
 	}
 }

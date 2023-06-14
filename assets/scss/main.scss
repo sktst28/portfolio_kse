@@ -239,7 +239,7 @@ body {
 
 		&-2 {
 			width: rem(750);
-			height: rem(600);
+			height: rem(670);
 			position: absolute;
 			top: 0;
 			left: 50%;
@@ -511,7 +511,8 @@ body {
 			padding: 0 rem(40);
 
 			.txt-bx {
-				border: 1px solid #919191;
+				border: 1px solid #999;
+				border-radius: 10px;
 				padding: rem(20);
 
 				.link {

@@ -139,6 +139,18 @@ body {
   text-align: center;
 }
 
+.sub-title {
+  position: sticky;
+  top: 35%;
+  width: 100%;
+  font-size: 5.625rem;
+  color: #e9e9e9;
+  opacity: 0.6;
+  font-weight: 700;
+  text-align: center;
+  z-index: -1;
+}
+
 /* 스킬 리스트 */
 .skill-list {
   display: flex;
@@ -151,10 +163,9 @@ body {
 }
 .skill-list .text {
   font-size: 1.125rem;
-  font-weight: 500;
   color: #fff;
   border: 2px solid #ddd;
-  color: #000;
+  color: #666666;
   border-radius: 20px;
   padding: 0.3125rem 0.9375rem;
 }
@@ -282,6 +293,9 @@ body {
 }
 
 /* 소개 섹션 */
+.section-about .sub-title {
+  top: 20%;
+}
 .section-about .about-flex {
   display: flex;
   align-items: center;
@@ -290,15 +304,20 @@ body {
   flex: 1 0 40%;
   max-width: 40%;
 }
+.section-about .about-flex .about-img .img {
+  border-radius: 20px;
+  overflow: hidden;
+}
 .section-about .about-flex .about-text {
   flex: 1 1 auto;
   width: 1%;
+  padding-left: 5vw;
   font-family: "SUIT", "Pretendard", -apple-system, BlinkMacSystemFont, "Times New Roman", "Palatino Linotype", "Book Antiqua", Georgia, Times, Palatino, serif;
+  color: #666666;
 }
 .section-about .about-flex .about-text .about-tit {
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 1.25rem;
 }
 .section-about .about-flex .about-text .about-des {
   font-size: 1.25rem;
@@ -307,16 +326,6 @@ body {
 /* 포트폴리오 섹션 */
 .section-work {
   position: relative;
-}
-.section-work .work-title {
-  position: sticky;
-  top: 35%;
-  width: 100%;
-  font-size: 5.625rem;
-  color: #666;
-  opacity: 0.3;
-  font-weight: 700;
-  text-align: center;
 }
 .section-work .work-list {
   display: flex;
@@ -365,7 +374,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 15px;
   color: #fff;
   display: flex;

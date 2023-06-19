@@ -128,6 +128,45 @@ body {
   transform-origin: left;
 }
 
+/* 헤더 */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  line-height: 80px;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  flex: 0 0 11.25rem;
+  max-width: 11.25rem;
+}
+.header .header-text {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.25em;
+  font-weight: 600;
+  text-align: center;
+}
+.header .quick-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+}
+.header .link {
+  display: block;
+  height: 80px;
+  line-height: 80px;
+}
+.header .link img {
+  width: 2.5rem;
+}
+
 /* 공통 섹션 */
 .section {
   padding: 10vh 0;
@@ -172,7 +211,7 @@ body {
 
 /* 아이콘 */
 .icon img {
-  width: 8.125rem;
+  width: 5.9375rem;
 }
 
 /* work , contact 타이틀 애니메이션 */
@@ -235,11 +274,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid #999;
   border-radius: 20px;
   width: 50rem;
   height: 43.75rem;
   background-color: #fff;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   z-index: 1;
 }
 .section-intro .bg-text {
@@ -251,7 +290,7 @@ body {
   font-weight: 700;
   color: #999;
   white-space: nowrap;
-  opacity: 0.2;
+  opacity: 0.1;
   animation: moveLeft 50s infinite linear;
   z-index: -1;
 }
@@ -316,11 +355,43 @@ body {
   color: #666666;
 }
 .section-about .about-flex .about-text .about-tit {
-  font-size: 1.25rem;
+  color: #444;
+  font-size: 1.375rem;
   font-weight: 600;
 }
 .section-about .about-flex .about-text .about-des {
   font-size: 1.25rem;
+}
+
+/* 왓 아이 두 섹션 */
+.section-do .do-list {
+  text-align: left;
+}
+.section-do .do-list__item {
+  padding-bottom: 1.25rem;
+}
+.section-do .do-list .title {
+  text-align: left;
+  margin-bottom: 5px;
+}
+.section-do .do-list .des {
+  position: relative;
+  font-size: 1.25rem;
+  color: #444;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.section-do .do-list .des::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 10px;
 }
 
 /* 포트폴리오 섹션 */
@@ -438,7 +509,7 @@ body {
   padding: 0 2.5rem;
 }
 .section-contact .contact-list__item .txt-bx {
-  border: 1px solid #999;
+  border: 1px solid #eee;
   border-radius: 10px;
   padding: 1.25rem;
 }

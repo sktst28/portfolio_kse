@@ -55,6 +55,20 @@
 		<script src="../assets/js/lib/jquery-ui.min.js"></script>
 	</head>
 	<body class="main-body">
+		<header class="header">
+			<div class="container container-wide">
+				<h1 class="logo">
+					<a href="../main/main.html" class="">logo</a>
+				</h1>
+				<span class="header-text">seoeun's Web Portfolio</span>
+				<div class="quick-list">
+					<a href="https://open.kakao.com/o/sjJs97mf" title="카카오톡 바로가기" class="link">카카오톡 </a>
+					<a href="mailto:sktst28@naver.com" title="이메일 보내기" class="link">
+						<img src="../assets/images/email.png" alt="이메일 아이콘" />
+					</a>
+				</div>
+			</div>
+		</header>
 		<main class="main" id="contents">
 			<div class="cover" id="cover"></div>
 			<!-- S : section-intro -->
@@ -72,7 +86,7 @@
 							<span></span>
 						</div>
 						<div class="bg-round"></div>
-						<div class="bg-text">Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio</div>
+						<div class="bg-text">Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio Portfolio</div>
 					</div>
 				</div>
 			</section>
@@ -80,7 +94,7 @@
 
 			<!-- S : section-about -->
 			<section class="section section-about" id="sec-about">
-				<h2 class="sub-title">About Me</h2>
+				<h2 class="sub-title wow zoomIn" data-wow-duration="1.5s">About Me</h2>
 				<div class="container">
 					<div class="about-flex">
 						<div class="about-img wow fadeInLeft">
@@ -99,9 +113,9 @@
 								사용자에게 즐거운 경험을 줄 수 있는 웹사이트를 제작하는것을 좋아합니다.<br />
 								화면에 보여지는 것 뿐만 아니라 어떻게하면 운영과 유지보수, 개발에 효율적일지 늘 고민하며 시맨틱 마크업을 합니다.<br /><br />
 								웹 에이전시에서 퍼블리셔로 일을하며 다양한 홈페이지를 경험하였고,<br />
-								하나의 목표를 향해 같이 달려가는 다양한 직군과의 협업을 중요하게 생각합니다.
+								하나의 목표를 향해 같이 달려가는 다양한 직군과의 소통을 중요하게 생각합니다.
 							</p>
-							<ul class="skill-list wowrap">
+							<!-- 	<ul class="skill-list wowrap">
 								<li class="item wow fadeInUp">
 									<div class="text">#HTML5</div>
 								</li>
@@ -126,12 +140,39 @@
 								<li class="item wow fadeInUp">
 									<div class="text">#Photoshop</div>
 								</li>
-							</ul>
+							</ul> -->
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- E : section-about -->
+
+			<!-- S : section-what i can do-->
+			<section class="section section-do" id="sec-do">
+				<h2 class="sub-title wow zoomIn" data-wow-duration="1.5s">What I can do</h2>
+				<div class="container">
+					<ul class="do-list">
+						<li class="do-list__item wowrap">
+							<h3 class="title wow fadeInUp">Markup</h3>
+							<p class="des wow fadeInUp">웹 표준을 준수하고 SEO 최적화를 위해 테그의 의미를 고려하며 마크업 합니다.</p>
+						</li>
+						<li class="do-list__item wowrap">
+							<h3 class="title">Skill</h3>
+							<p class="des wow fadeInUp">Javascript를 사용해 동적인 페이지를 구현하고 어떤 기기에서도 잘 보이도록 %,rem 단위를 사용하여 반응형 웹을 제작합니다.</p>
+							<p class="des wow fadeInUp">SCSS전처리기와 Zeplin를 다룰 줄 알며, 생산성 있는 코드 협업을 위해 Git을 사용합니다.</p>
+							<p class="des wow fadeInUp">Photoshop, Illustrator를 이용한 디자인 편집 작업이 가능합니다.</p>
+						</li>
+						<li class="do-list__item wowrap">
+							<h3 class="title">Co-work</h3>
+							<p class="des wow fadeInUp">
+								맡은 프로젝트에 대한 책임감을 가지고 임하며 함께 일하는 동료들과의 소통을 중요하게 생각합니다.<br />
+								더 나은 방식이 있으면 제안하고 의논하는것을 좋아합니다.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- E : section-what i can do-->
 
 			<!-- S : section-work -->
 			<section class="section section-work" id="sec-work">
@@ -179,7 +220,7 @@
 									<p class="type">기업 홈페이지</p>
 									<div class="flex-bx">
 										<p class="type">#반응형</p>
-										<p class="type">#서브 페이지</p>
+										<p class="type">#일부 서브 페이지</p>
 										<p class="type">#기간 1주</p>
 									</div>
 								</div>
@@ -405,61 +446,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 
 		<!-- COMMON -->
-		<script src="../assets/js/common.js"></script>
-
-		<script>
-			// 윈도우 로드 시 실행할 이벤트 핸들러 등록
-			window.addEventListener('load', function () {
-				$(function () {
-					Splitting();
-				});
-			});
-
-			//work 더보기 스크립트
-			$(function () {
-				$('.work-list__item').slice(0, 6).show(); // 최초 10개 선택
-
-				$('.more-btn').click(function (e) {
-					// Load More를 위한 클릭 이벤트e
-					e.preventDefault();
-					$('.work-list__item:hidden').slice(0, 6).show(); // 숨김 설정된 다음 2개를 선택하여 표시
-					if ($('.work-list__item:hidden').length == 0) {
-						$('.more-btn').hide();
-					}
-				});
-			});
-
-			$(function () {
-				$(window).scroll(function () {
-					if ($(this).scrollTop() >= $('#sec-work').offset().top - 300) {
-						$('#sec-work').addClass('active');
-					} else {
-						$('#sec-work').removeClass('active');
-					}
-
-					if ($(this).scrollTop() >= $('#sec-contact').offset().top - 500) {
-						$('#sec-work').removeClass('active');
-					}
-				});
-			});
-
-			window.addEventListener('load', function () {
-				var cover = document.getElementById('cover'),
-					indexSec = document.getElementById('sec-intro'),
-					text2 = document.getElementById('intro-text-2');
-
-				//  애니메이션 실행 코드
-				cover.style.animation = 'coverleft 2000ms both cubic-bezier(0.77, 0, 0.175, 1';
-
-				setTimeout(function () {
-					indexSec.classList.add('active');
-				}, 1000);
-
-				text2.addEventListener('animationend', function () {
-					// 애니메이션이 끝난 후 실행될 코드
-					text2.classList.add('on'); // 태그에 CSS 클래스 추가
-				});
-			});
-		</script>
+		<script src="../assets/js/main.js"></script>
 	</body>
 </html>

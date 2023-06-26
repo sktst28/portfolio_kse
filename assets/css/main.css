@@ -62,25 +62,21 @@
   0% {
     transform: translateY(-50px);
     opacity: 0;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
   }
   20% {
     transform: translateY(0);
     opacity: 1;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
   }
   80% {
     transform: translateY(0);
     opacity: 1;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
   }
   100% {
     transform: translateY(50px);
     opacity: 0;
-    -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
     clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
   }
 }
@@ -88,19 +84,16 @@
   0% {
     transform: translateY(-50px);
     opacity: 0;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
   }
   20% {
     transform: translateY(0);
     opacity: 1;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
   }
   100% {
     transform: translateY(0);
     opacity: 1;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
   }
 }
@@ -246,18 +239,32 @@ body {
   position: relative;
   margin: 0 auto;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .section-intro .intro-text-1 {
   width: 31.25rem;
   height: 31.25rem;
 }
+@media (max-width: 1850px) {
+  .section-intro .intro-text-1 {
+    height: 25rem;
+  }
+}
 .section-intro .intro-text-2 {
   width: 46.875rem;
-  height: 41.875rem;
+  height: 31.25rem;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+@media (max-width: 1850px) {
+  .section-intro .intro-text-2 {
+    height: 25rem;
+  }
 }
 .section-intro .intro-text span {
   opacity: 0;
@@ -280,6 +287,11 @@ body {
   background-color: #fff;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   z-index: 1;
+}
+@media (max-width: 1850px) {
+  .section-intro .bg-round {
+    height: 31.25rem;
+  }
 }
 .section-intro .bg-text {
   position: absolute;
@@ -368,7 +380,7 @@ body {
   text-align: left;
 }
 .section-do .do-list__item {
-  padding-bottom: 1.25rem;
+  padding-bottom: 1.875rem;
 }
 .section-do .do-list .title {
   text-align: left;
@@ -379,6 +391,7 @@ body {
   font-size: 1.25rem;
   color: #444;
   font-weight: 500;
+  line-height: 1.7;
   padding-left: 10px;
 }
 .section-do .do-list .des::before {

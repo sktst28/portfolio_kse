@@ -110,6 +110,13 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.container {
+  width: 100%;
+  max-width: 87.5rem;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .cover {
   background: #e7e7e7;
   z-index: 9999999;
@@ -129,6 +136,7 @@ body {
   right: 0;
   height: 80px;
   line-height: 80px;
+  z-index: 100;
 }
 .header .container {
   display: flex;
@@ -182,6 +190,21 @@ body {
   text-align: center;
   z-index: -1;
 }
+@media (max-width: 1600px) {
+  .sub-title {
+    font-size: 10em;
+  }
+}
+@media (max-width: 1200px) {
+  .sub-title {
+    font-size: 7em;
+  }
+}
+@media (max-width: 768px) {
+  .sub-title {
+    font-size: 5em;
+  }
+}
 
 /* 스킬 리스트 */
 .skill-list {
@@ -227,6 +250,11 @@ body {
   	font-weight: 700;
   } */
 }
+@media (max-width: 768px) {
+  .section-intro {
+    padding: 0 20px;
+  }
+}
 .section-intro .intro-bx {
   position: absolute;
   top: 50%;
@@ -253,6 +281,12 @@ body {
     height: 25rem;
   }
 }
+@media (max-width: 1024px) {
+  .section-intro .intro-text-1 {
+    width: 21.875rem;
+    height: 21.875rem;
+  }
+}
 .section-intro .intro-text-2 {
   width: 46.875rem;
   height: 31.25rem;
@@ -263,6 +297,12 @@ body {
 }
 @media (max-width: 1850px) {
   .section-intro .intro-text-2 {
+    height: 25rem;
+  }
+}
+@media (max-width: 1024px) {
+  .section-intro .intro-text-2 {
+    width: 28.125rem;
     height: 25rem;
   }
 }
@@ -290,6 +330,12 @@ body {
 }
 @media (max-width: 1850px) {
   .section-intro .bg-round {
+    height: 31.25rem;
+  }
+}
+@media (max-width: 1024px) {
+  .section-intro .bg-round {
+    width: 37.5rem;
     height: 31.25rem;
   }
 }
@@ -416,11 +462,6 @@ body {
   flex-wrap: wrap;
   align-items: center;
 }
-@media (max-width: 768px) {
-  .section-work .work-list {
-    display: block;
-  }
-}
 .section-work .work-list__item {
   flex: 1 0 50%;
   max-width: 50%;
@@ -434,9 +475,7 @@ body {
 }
 @media (max-width: 768px) {
   .section-work .work-list__item {
-    display: block;
-    max-width: 100%;
-    padding: 0 2.5rem 3.125rem 2.5rem;
+    padding: 0 1.25rem 3.125rem 1.25rem;
   }
 }
 .section-work .work-list__item a {
@@ -507,6 +546,12 @@ body {
 .section-contact .icon {
   margin: 1.5625rem 0;
 }
+@media (max-width: 768px) {
+  .section-contact .icon {
+    width: 14%;
+    margin: 1.5625rem auto;
+  }
+}
 .section-contact .data-text {
   padding-bottom: 1.875rem;
 }
@@ -519,12 +564,24 @@ body {
   justify-content: center;
 }
 .section-contact .contact-list__item {
+  flex: 1 0 50%;
+  max-width: 50%;
   padding: 0 2.5rem;
+}
+@media (max-width: 768px) {
+  .section-contact .contact-list__item {
+    padding: 0 0.9375rem;
+  }
 }
 .section-contact .contact-list__item .txt-bx {
   border: 1px solid #eee;
   border-radius: 10px;
   padding: 1.25rem;
+}
+@media (max-width: 768px) {
+  .section-contact .contact-list__item .txt-bx {
+    height: 167px;
+  }
 }
 .section-contact .contact-list__item .txt-bx .link {
   display: block;
@@ -532,9 +589,20 @@ body {
 .section-contact .contact-list__item .txt-bx .link img {
   width: 15rem;
 }
+@media (max-width: 768px) {
+  .section-contact .contact-list__item .txt-bx .link {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
 .section-contact .contact-list__item .txt-bx .text {
   display: inline-block;
   padding-top: 10px;
+}
+@media (max-width: 768px) {
+  .section-contact .contact-list__item .txt-bx .text {
+    font-size: 15px;
+  }
 }
 .section-contact.active .icon {
   animation: tossing 1.5s infinite both;

@@ -214,6 +214,11 @@ body {
 .section {
   padding: 10vh 0;
 }
+@media (max-width: 768px) {
+  .section {
+    padding: 2.5rem 0;
+  }
+}
 
 /* 공통 타이틀 */
 .title {
@@ -245,6 +250,11 @@ body {
 @media (max-width: 768px) {
   .sub-title {
     font-size: 5em;
+  }
+}
+@media (max-width: 560px) {
+  .sub-title {
+    font-size: 3em;
   }
 }
 
@@ -294,7 +304,12 @@ body {
 }
 @media (max-width: 768px) {
   .section-intro {
-    padding: 0 20px;
+    height: 70vh;
+  }
+}
+@media (max-width: 560px) {
+  .section-intro {
+    height: 60vh;
   }
 }
 .section-intro .intro-bx {
@@ -305,6 +320,16 @@ body {
   width: 100%;
   z-index: 2;
 }
+@media (max-width: 768px) {
+  .section-intro .intro-bx {
+    width: 70%;
+  }
+}
+@media (max-width: 560px) {
+  .section-intro .intro-bx {
+    width: 80%;
+  }
+}
 .section-intro .intro-text {
   position: relative;
   margin: 0 auto;
@@ -313,6 +338,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .section-intro .intro-text {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 3.125rem;
+  }
 }
 .section-intro .intro-text-1 {
   width: 31.25rem;
@@ -330,7 +362,7 @@ body {
   }
 }
 .section-intro .intro-text-2 {
-  width: 46.875rem;
+  width: 40.625rem;
   height: 31.25rem;
   position: absolute;
   top: 0;
@@ -345,8 +377,10 @@ body {
 @media (max-width: 1024px) {
   .section-intro .intro-text-2 {
     width: 28.125rem;
-    height: 25rem;
   }
+}
+.section-intro .intro-text-2 span {
+  font-size: 4vw;
 }
 .section-intro .intro-text span {
   opacity: 0;
@@ -354,6 +388,16 @@ body {
   display: block;
   font-size: 5vw;
   font-weight: 800;
+}
+@media (max-width: 768px) {
+  .section-intro .intro-text span {
+    font-size: 7vw;
+  }
+}
+@media (max-width: 560px) {
+  .section-intro .intro-text span {
+    font-size: 8vw;
+  }
 }
 .section-intro .intro-text.on span {
   opacity: 1;
@@ -385,6 +429,11 @@ body {
   .section-intro .bg-round {
     width: 100%;
     height: 18.75rem;
+  }
+}
+@media (max-width: 560px) {
+  .section-intro .bg-round {
+    height: 16.25rem;
   }
 }
 .section-intro .bg-text {
@@ -461,6 +510,11 @@ body {
     margin: 0 auto;
   }
 }
+@media (max-width: 768px) {
+  .section-about .about-flex .about-img {
+    max-width: 80%;
+  }
+}
 .section-about .about-flex .about-img .img {
   border-radius: 20px;
   overflow: hidden;
@@ -485,8 +539,18 @@ body {
   font-size: 1.375rem;
   font-weight: 600;
 }
+@media (max-width: 768px) {
+  .section-about .about-flex .about-text .about-tit {
+    font-size: 1.25em;
+  }
+}
 .section-about .about-flex .about-text .about-des {
   font-size: 1.25rem;
+}
+@media (max-width: 768px) {
+  .section-about .about-flex .about-text .about-des {
+    font-size: 1.0625em;
+  }
 }
 
 /* 왓 아이 두 섹션 */
@@ -500,6 +564,11 @@ body {
   text-align: left;
   margin-bottom: 5px;
 }
+@media (max-width: 1024px) {
+  .section-do .do-list .title {
+    font-size: 2.125em;
+  }
+}
 .section-do .do-list .des {
   position: relative;
   font-size: 1.25rem;
@@ -507,6 +576,11 @@ body {
   font-weight: 500;
   line-height: 1.7;
   padding-left: 10px;
+}
+@media (max-width: 1024px) {
+  .section-do .do-list .des {
+    font-size: 1.125em;
+  }
 }
 .section-do .do-list .des::before {
   content: "";
@@ -606,6 +680,13 @@ body {
   border-radius: 50px;
   z-index: 50;
 }
+@media (max-width: 768px) {
+  .section-work .more-btn {
+    width: 9.375rem;
+    padding: 0.9375rem 0;
+    font-size: 1em;
+  }
+}
 
 /* 컨택 섹션 */
 .section-contact {
@@ -628,7 +709,7 @@ body {
 }
 @media (max-width: 768px) {
   .section-contact .data-text span {
-    font-size: 8vw;
+    font-size: 10vw;
   }
 }
 .section-contact .contact-list {
@@ -642,25 +723,27 @@ body {
     padding: 0 6.25rem;
   }
 }
+@media (max-width: 560px) {
+  .section-contact .contact-list {
+    flex-wrap: wrap;
+  }
+}
 .section-contact .contact-list__item {
   flex: 1 0 50%;
   max-width: 50%;
   padding: 0 2.5rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 560px) {
   .section-contact .contact-list__item {
-    padding: 0 0.9375rem;
+    flex: 1 0 100%;
+    max-width: 100%;
+    padding: 0 1.875rem 1.25rem 1.875rem;
   }
 }
 .section-contact .contact-list__item .txt-bx {
   border: 1px solid #eee;
   border-radius: 10px;
   padding: 1.25rem;
-}
-@media (max-width: 768px) {
-  .section-contact .contact-list__item .txt-bx {
-    height: 167px;
-  }
 }
 .section-contact .contact-list__item .txt-bx .link {
   display: block;

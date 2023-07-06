@@ -144,12 +144,8 @@
 }
 
 body {
-	//background-color: #252525;
-	//background-color: #323232;
-	//color: #f2f2f2;
 	color: #000;
 	font-family: 'Montserrat', sans-serif;
-	//color: #e3e3e3;
 }
 
 .container {
@@ -257,6 +253,10 @@ $header-height: 80px;
 /* 공통 섹션 */
 .section {
 	padding: 10vh 0;
+
+	@media (max-width: 768px) {
+		padding: rem(40) 0;
+	}
 }
 
 /* 공통 타이틀 */
@@ -285,6 +285,10 @@ $header-height: 80px;
 
 	@media (max-width: 768px) {
 		font-size: 5em;
+	}
+
+	@media (max-width: 560px) {
+		font-size: 3em;
 	}
 }
 
@@ -333,7 +337,11 @@ $header-height: 80px;
 	overflow-x: hidden;
 
 	@media (max-width: 768px) {
-		padding: 0 20px;
+		height: 70vh;
+	}
+
+	@media (max-width: 560px) {
+		height: 60vh;
 	}
 
 	.intro-bx {
@@ -343,6 +351,14 @@ $header-height: 80px;
 		transform: translate(-50%, -50%);
 		width: 100%;
 		z-index: 2;
+
+		@media (max-width: 768px) {
+			width: 70%;
+		}
+
+		@media (max-width: 560px) {
+			width: 80%;
+		}
 	}
 	.intro-text {
 		position: relative;
@@ -352,6 +368,12 @@ $header-height: 80px;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+		@media (max-width: 768px) {
+			width: 100% !important;
+			height: 100% !important;
+			padding: 0 rem(50);
+		}
 
 		&-1 {
 			width: rem(500);
@@ -368,7 +390,7 @@ $header-height: 80px;
 		}
 
 		&-2 {
-			width: rem(750);
+			width: rem(650);
 			height: rem(500);
 			position: absolute;
 			top: 0;
@@ -381,7 +403,10 @@ $header-height: 80px;
 
 			@media (max-width: 1024px) {
 				width: rem(450);
-				height: rem(400);
+			}
+
+			span {
+				font-size: 4vw;
 			}
 		}
 
@@ -391,6 +416,14 @@ $header-height: 80px;
 			display: block;
 			font-size: 5vw;
 			font-weight: 800;
+
+			@media (max-width: 768px) {
+				font-size: 7vw;
+			}
+
+			@media (max-width: 560px) {
+				font-size: 8vw;
+			}
 		}
 
 		&.on {
@@ -424,6 +457,10 @@ $header-height: 80px;
 		@media (max-width: 768px) {
 			width: 100%;
 			height: rem(300);
+		}
+
+		@media (max-width: 560px) {
+			height: rem(260);
 		}
 	}
 
@@ -524,6 +561,10 @@ $header-height: 80px;
 				margin: 0 auto;
 			}
 
+			@media (max-width: 768px) {
+				max-width: 80%;
+			}
+
 			.img {
 				border-radius: 20px;
 				overflow: hidden;
@@ -547,9 +588,17 @@ $header-height: 80px;
 				color: #444;
 				font-size: rem(22);
 				font-weight: 600;
+
+				@media (max-width: 768px) {
+					font-size: em(20);
+				}
 			}
 			.about-des {
 				font-size: rem(20);
+
+				@media (max-width: 768px) {
+					font-size: em(17);
+				}
 			}
 		}
 	}
@@ -566,6 +615,10 @@ $header-height: 80px;
 		.title {
 			text-align: left;
 			margin-bottom: 5px;
+
+			@media (max-width: 1024px) {
+				font-size: em(34);
+			}
 		}
 		.des {
 			position: relative;
@@ -574,6 +627,10 @@ $header-height: 80px;
 			font-weight: 500;
 			line-height: 1.7;
 			padding-left: 10px;
+
+			@media (max-width: 1024px) {
+				font-size: em(18);
+			}
 
 			&::before {
 				content: '';
@@ -688,6 +745,12 @@ $header-height: 80px;
 		border: 1px solid #ddd;
 		border-radius: 50px;
 		z-index: 50;
+
+		@media (max-width: 768px) {
+			width: rem(150);
+			padding: rem(15) 0;
+			font-size: em(16);
+		}
 	}
 }
 
@@ -709,7 +772,7 @@ $header-height: 80px;
 			font-size: 5vw;
 
 			@media (max-width: 768px) {
-				font-size: 8vw;
+				font-size: 10vw;
 			}
 		}
 	}
@@ -723,23 +786,25 @@ $header-height: 80px;
 			padding: 0 rem(100);
 		}
 
+		@media (max-width: 560px) {
+			flex-wrap: wrap;
+		}
+
 		&__item {
 			flex: 1 0 50%;
 			max-width: 50%;
 			padding: 0 rem(40);
 
-			@media (max-width: 768px) {
-				padding: 0 rem(15);
+			@media (max-width: 560px) {
+				flex: 1 0 100%;
+				max-width: 100%;
+				padding: 0 rem(30) rem(20) rem(30);
 			}
 
 			.txt-bx {
 				border: 1px solid #eee;
 				border-radius: 10px;
 				padding: rem(20);
-
-				@media (max-width: 768px) {
-					height: 167px;
-				}
 
 				.link {
 					display: block;

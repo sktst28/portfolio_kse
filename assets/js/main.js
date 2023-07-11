@@ -1,9 +1,5 @@
 'use strict';
 
-/* loading image */
-$(window).on('load', function(){
-  $('.loading-image').fadeOut(300);
-}); 
 
 var wowJS = new WOW().init(); 
 

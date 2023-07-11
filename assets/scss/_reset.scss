@@ -11,12 +11,10 @@
  */
 
 html {
-  line-height: 1.5; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-  min-width: 320px;
-  word-break: keep-all;
-  font-family: $font-family-main;
-  color: $body-color;
+	line-height: 1.5; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+	min-width: 320px;
+	word-break: keep-all;
 }
 
 /* Sections
@@ -27,7 +25,7 @@ html {
  */
 
 body {
-  margin: 0;
+	margin: 0;
 }
 
 /**
@@ -35,17 +33,7 @@ body {
  */
 
 main {
-  display: block;
-}
-
-/**
- * Headings font size
- */
-
-@each $key, $value in $heading-sizes {
-  #{$key} {
-    font-size: $value;
-  }
+	display: block;
 }
 
 /* Grouping content
@@ -57,9 +45,9 @@ main {
  */
 
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+	box-sizing: content-box; /* 1 */
+	height: 0; /* 1 */
+	overflow: visible; /* 2 */
 }
 
 /**
@@ -68,8 +56,8 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
 }
 
 /* Text-level semantics
@@ -80,9 +68,9 @@ pre {
  */
 
 a {
-  color: inherit;
-  text-decoration: none;
-  background-color: transparent;
+	color: inherit;
+	text-decoration: none;
+	background-color: transparent;
 }
 
 /**
@@ -92,8 +80,8 @@ a {
 
 abbr[title],
 dfn[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
 }
 
 /**
@@ -102,7 +90,7 @@ dfn[title] {
 
 b,
 strong {
-  font-weight: bolder;
+	font-weight: bolder;
 }
 
 /**
@@ -113,8 +101,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
 }
 
 /**
@@ -122,7 +110,7 @@ samp {
  */
 
 small {
-  font-size: 80%;
+	font-size: 80%;
 }
 
 /**
@@ -132,18 +120,18 @@ small {
 
 sub,
 sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
 }
 
 sub {
-  bottom: -0.25em;
+	bottom: -0.25em;
 }
 
 sup {
-  top: -0.5em;
+	top: -0.5em;
 }
 
 /* Embedded content
@@ -154,7 +142,7 @@ sup {
  */
 
 img {
-  border-style: none;
+	border-style: none;
 }
 
 /* Forms
@@ -170,12 +158,12 @@ input,
 optgroup,
 select,
 textarea {
-  font-size: 1rem;
-  font-family: inherit; /* 1 */
-  line-height: 1.2; /* 1 */
-  margin: 0; /* 2 */
-  padding: 0;
-  vertical-align: middle;
+	font-size: 1rem;
+	font-family: inherit; /* 1 */
+	line-height: 1.2; /* 1 */
+	margin: 0; /* 2 */
+	padding: 0;
+	vertical-align: middle;
 }
 
 /**
@@ -185,8 +173,8 @@ textarea {
 
 button,
 input {
-  /* 1 */
-  overflow: visible;
+	/* 1 */
+	overflow: visible;
 }
 
 /**
@@ -196,8 +184,8 @@ input {
 
 button,
 select {
-  /* 1 */
-  text-transform: none;
+	/* 1 */
+	text-transform: none;
 }
 
 /**
@@ -208,7 +196,7 @@ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
-  -webkit-appearance: button;
+	-webkit-appearance: button;
 }
 
 /**
@@ -219,8 +207,8 @@ button::-moz-focus-inner,
 [type='button']::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
 [type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+	border-style: none;
+	padding: 0;
 }
 
 /**
@@ -231,7 +219,7 @@ button:-moz-focusring,
 [type='button']:-moz-focusring,
 [type='reset']:-moz-focusring,
 [type='submit']:-moz-focusring {
-  outline: 1px dotted ButtonText;
+	outline: 1px dotted ButtonText;
 }
 
 /**
@@ -239,7 +227,7 @@ button:-moz-focusring,
  */
 
 fieldset {
-  border: 0;
+	border: 0;
 }
 
 /**
@@ -250,12 +238,12 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+	box-sizing: border-box; /* 1 */
+	color: inherit; /* 2 */
+	display: table; /* 1 */
+	max-width: 100%; /* 1 */
+	padding: 0; /* 3 */
+	white-space: normal; /* 1 */
 }
 
 /**
@@ -263,7 +251,7 @@ legend {
  */
 
 progress {
-  vertical-align: baseline;
+	vertical-align: baseline;
 }
 
 /**
@@ -271,7 +259,7 @@ progress {
  */
 
 textarea {
-  overflow: auto;
+	overflow: auto;
 }
 
 /**
@@ -291,7 +279,7 @@ textarea {
 
 [type='number']::-webkit-inner-spin-button,
 [type='number']::-webkit-outer-spin-button {
-  height: auto;
+	height: auto;
 }
 
 /**
@@ -300,8 +288,8 @@ textarea {
  */
 
 [type='search'] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -309,7 +297,7 @@ textarea {
  */
 
 [type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 
 /**
@@ -318,8 +306,8 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
 }
 
 /* Interactive
@@ -330,7 +318,7 @@ textarea {
  */
 
 details {
-  display: block;
+	display: block;
 }
 
 /*
@@ -338,7 +326,7 @@ details {
  */
 
 summary {
-  display: list-item;
+	display: list-item;
 }
 
 /* Misc
@@ -349,7 +337,7 @@ summary {
  */
 
 template {
-  display: none;
+	display: none;
 }
 
 /**
@@ -357,7 +345,7 @@ template {
  */
 
 [hidden] {
-  display: none;
+	display: none;
 }
 
 /**
@@ -449,9 +437,9 @@ input,
 select,
 optgroup,
 button {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /**
@@ -469,7 +457,7 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+	display: block;
 }
 
 /*
@@ -479,8 +467,8 @@ section {
 ol,
 ul,
 li {
-  padding: 0;
-  list-style: none;
+	padding: 0;
+	list-style: none;
 }
 
 /**
@@ -488,8 +476,8 @@ li {
  */
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /*
@@ -498,92 +486,92 @@ table {
 
 blockquote,
 q {
-  quotes: none;
+	quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: none;
+	content: none;
 }
 
 // 추가 reset khr
 
 button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  vertical-align: middle;
-  margin: 0;
-  cursor: pointer;
-  -webkit-appearance: none;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	vertical-align: middle;
+	margin: 0;
+	cursor: pointer;
+	-webkit-appearance: none;
 }
 
 input {
-  font: inherit;
-  margin: 0;
-  line-height: normal;
-  // -webkit-border-radius: 0;
-  // -webkit-appearance: none;
-  border-radius: 0;
-  resize: none;
+	font: inherit;
+	margin: 0;
+	line-height: normal;
+	// -webkit-border-radius: 0;
+	// -webkit-appearance: none;
+	border-radius: 0;
+	resize: none;
 }
 
 input {
-  &[type='submit'],
-  &[type='button'],
-  &[type='reset'] {
-    cursor: pointer;
-    -webkit-appearance: none;
-  }
+	&[type='submit'],
+	&[type='button'],
+	&[type='reset'] {
+		cursor: pointer;
+		-webkit-appearance: none;
+	}
 }
 
 img,
 fieldset {
-  border: 0;
-  outline: none;
+	border: 0;
+	outline: none;
 }
 img {
-  border: 0;
+	border: 0;
 
-  max-width: 100%;
-  vertical-align: top;
+	max-width: 100%;
+	vertical-align: top;
 }
 
 select {
-  margin: 0;
-  resize: none;
-  vertical-align: middle;
-  -webkit-border-radius: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -webkit-user-select: none;
-  user-select: none;
-  text-overflow: '';
-  zoom: 1;
+	margin: 0;
+	resize: none;
+	vertical-align: middle;
+	-webkit-border-radius: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-user-select: none;
+	user-select: none;
+	text-overflow: '';
+	zoom: 1;
 
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: calc(100% - 10px) center;
-  background-image: url(../images/icon/select_icon.svg);
-  background-size: 12px 6px;
-  padding-right: 22px !important;
-  // text-indent: 5px;
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: calc(100% - 10px) center;
+	background-image: url(../images/icon/select_icon.svg);
+	background-size: 12px 6px;
+	padding-right: 22px !important;
+	// text-indent: 5px;
 }
 
 /* IE 10, 11의 네이티브 화살표 숨기기 */
 
 select::-ms-expand {
-  display: none;
+	display: none;
 }
 
 /* clears the input search 'X' from Internet Explorer */
 input[type='search']::-ms-clear,
 input[type='search']::-ms-reveal {
-  display: none;
-  width: 0;
-  height: 0;
+	display: none;
+	width: 0;
+	height: 0;
 }
 
 /* clears the input search 'X' from Chrome */
@@ -591,22 +579,22 @@ input[type='search']::-webkit-search-decoration,
 input[type='search']::-webkit-search-cancel-button,
 input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
-  display: none;
+	display: none;
 }
 
 /* Outline */
 * {
-  outline: none !important;
+	outline: none !important;
 }
 
 textarea:focus {
-  outline: none !important;
+	outline: none !important;
 }
 
 button:focus {
-  outline: none !important;
+	outline: none !important;
 }
 
 input:focus {
-  outline: none !important;
+	outline: none !important;
 }

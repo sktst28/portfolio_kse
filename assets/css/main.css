@@ -166,7 +166,7 @@ body {
   }
 }
 .header .header-text {
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Pretendard", sans-serif;
   font-size: 1.25em;
   font-weight: 600;
   text-align: center;
@@ -287,25 +287,11 @@ body {
   width: 5.9375rem;
 }
 
-/* work , contact 타이틀 애니메이션 */
-.data-text--st2 span {
-  text-decoration: none;
-  font-weight: 100;
-  letter-spacing: -3px;
-  animation: weight 2s infinite;
-  animation-delay: calc(var(--char-index) * 150ms);
-}
-
 /* 인트로 섹션 */
 .section-intro {
   position: relative;
   height: 100vh;
   overflow-x: hidden;
-  /* 	.data-text .char {
-  	display: inline-block;
-  	font-size: 6vw;
-  	font-weight: 700;
-  } */
 }
 @media (max-width: 768px) {
   .section-intro {
@@ -528,7 +514,7 @@ body {
   flex: 1 1 auto;
   width: 1%;
   padding-left: 5vw;
-  font-family: "SUIT", "Pretendard", -apple-system, BlinkMacSystemFont, "Times New Roman", "Palatino Linotype", "Book Antiqua", Georgia, Times, Palatino, serif;
+  font-family: "SUIT", sans-serif;
   color: #666666;
 }
 @media (max-width: 1200px) {
@@ -747,6 +733,7 @@ body {
 }
 .section-contact .data-text span {
   font-size: 5vw;
+  font-weight: 700;
 }
 @media (max-width: 768px) {
   .section-contact .data-text span {

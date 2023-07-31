@@ -717,87 +717,28 @@ body {
 
 /* 컨택 섹션 */
 .section-contact {
-  text-align: center;
+  position: relative;
 }
-.section-contact .icon {
-  margin: 1.5625rem 0;
-}
-@media (max-width: 768px) {
-  .section-contact .icon {
-    width: 14%;
-    margin: 1.5625rem auto;
-  }
-}
-.section-contact .data-text {
-  padding-bottom: 1.875rem;
-}
-.section-contact .data-text span {
-  font-size: 5vw;
-  font-weight: 700;
-}
-@media (max-width: 768px) {
-  .section-contact .data-text span {
-    font-size: 10vw;
-  }
-}
-.section-contact .contact-list {
+.section-contact .container {
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+.section-contact .contact-text {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.section-contact .contact-link {
+  text-align: center;
   margin-top: 3.125rem;
 }
-@media (min-width: 1400px) {
-  .section-contact .contact-list {
-    padding: 0 6.25rem;
-  }
-}
-@media (max-width: 560px) {
-  .section-contact .contact-list {
-    flex-wrap: wrap;
-  }
-}
-.section-contact .contact-list__item {
-  flex: 1 0 50%;
-  max-width: 50%;
-  padding: 0 2.5rem;
-}
-@media (max-width: 560px) {
-  .section-contact .contact-list__item {
-    flex: 1 0 100%;
-    max-width: 100%;
-    padding: 0 1.875rem 1.25rem 1.875rem;
-  }
-}
-.section-contact .contact-list__item .txt-bx {
-  border: 1px solid #eee;
-  border-radius: 10px;
-  padding: 1.25rem;
-}
-.section-contact .contact-list__item .txt-bx .link {
+.section-contact .contact-link .link {
   display: block;
-}
-.section-contact .contact-list__item .txt-bx .link img {
-  width: 15rem;
-}
-@media (max-width: 768px) {
-  .section-contact .contact-list__item .txt-bx .link {
-    width: 50%;
-    margin: 0 auto;
-  }
-}
-.section-contact .contact-list__item .txt-bx .text {
-  display: inline-block;
-  padding-top: 10px;
-}
-@media (max-width: 768px) {
-  .section-contact .contact-list__item .txt-bx .text {
-    font-size: 15px;
-  }
-}
-.section-contact.active .icon {
-  animation: tossing 1.5s infinite both;
-  -webkit-animation: tossing 1.5s infinite both;
-  animation-delay: 1s;
+  font-family: "Montserrat", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
 }
 
 /* 푸터 */

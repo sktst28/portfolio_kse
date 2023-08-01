@@ -711,6 +711,7 @@ body {
   display: inline-block;
   text-align: center;
   margin-top: 3.125rem;
+  opacity: 0;
 }
 .section-contact .contact-link::after {
   content: "";
@@ -729,9 +730,13 @@ body {
   font-weight: 700;
   position: relative;
 }
+.section-contact .contact-link.on {
+  opacity: 1;
+}
 .section-contact .contact-link.on::after {
   animation: typo_animation 1.3s cubic-bezier(0.5, 0.2, 0, 1);
   animation-fill-mode: both;
+  animation-delay: 500ms;
 }
 
 /* 푸터 */

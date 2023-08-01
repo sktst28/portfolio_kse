@@ -28,17 +28,17 @@ AOS.init({
 
 
 	// 윈도우 로드 시 실행할 이벤트 핸들러 등록
-  window.addEventListener('load', function () {
+/*   window.addEventListener('load', function () {
     $(function () {
-      $('.contact-link').addClass('on');
       
       Splitting();
     });
   });
-
+ */
   $(window).scroll(function () {
     if ($(this).scrollTop() >= $('.section-contact').offset().top - 30) {
-   
+      $('.contact-link').addClass('on');
+      
       Splitting(); 
     } 
   });

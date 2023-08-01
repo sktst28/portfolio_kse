@@ -743,6 +743,7 @@ $header-height: 80px;
 		display: inline-block;
 		text-align: center;
 		margin-top: rem(50);
+		opacity: 0;
 
 		&::after {
 			content: '';
@@ -764,9 +765,11 @@ $header-height: 80px;
 		}
 
 		&.on {
+			opacity: 1;
 			&::after {
 				animation: typo_animation 1.3s cubic-bezier(0.5, 0.2, 0, 1);
 				animation-fill-mode: both;
+				animation-delay: 500ms;
 			}
 		}
 	}

@@ -30,8 +30,17 @@ AOS.init({
 	// 윈도우 로드 시 실행할 이벤트 핸들러 등록
   window.addEventListener('load', function () {
     $(function () {
+      $('.contact-link').addClass('on');
+      
       Splitting();
     });
+  });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() >= $('.section-contact').offset().top - 30) {
+   
+      Splitting(); 
+    } 
   });
 
   //work 더보기 스크립트

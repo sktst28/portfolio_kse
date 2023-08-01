@@ -5,38 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* 애니메이션 */
-@keyframes tossing {
-	0% {
-		transform: rotate(-2deg);
-	}
-	50% {
-		transform: rotate(2deg);
-	}
-	100% {
-		transform: rotate(-2deg);
-	}
-}
-
-@keyframes UpDown {
-	0% {
-		margin-top: 0px;
-	}
-
-	100% {
-		margin-top: 5px;
-	}
-}
-
-@-webkit-keyframes UpDown {
-	0% {
-		-webkit-margin-top: 0px;
-	}
-
-	100% {
-		-webkit-margin-top: 5px;
-	}
-}
-
 @keyframes typo_animation {
 	0% {
 		left: 0;
@@ -47,7 +15,7 @@
 	}
 }
 
-@keyframes weight {
+/* @keyframes weight {
 	from {
 		font-weight: 100;
 	}
@@ -59,15 +27,11 @@
 	to {
 		font-weight: 100;
 	}
-}
+} */
 
-@keyframes slide-in {
-	0% {
-		transform: translateY(-1em) rotate(-0.5turn) scale(0.5);
-	}
-	20%,
-	100% {
-		transform: translateY(0) rotate(0deg) scale(1);
+@keyframes slide-up {
+	from {
+		transform: translateY(125%);
 	}
 }
 
@@ -470,20 +434,6 @@ $header-height: 80px;
 		z-index: -1;
 	}
 
-	.icon {
-		&-hi {
-			animation: tossing 1.5s infinite both;
-		}
-		&-down {
-			position: absolute;
-			top: 0;
-			right: 0;
-			-webkit-animation: UpDown 0.6s linear infinite;
-			animation: UpDown 0.6s linear infinite;
-			animation-delay: 0.6s;
-		}
-	}
-
 	&.active {
 		.intro-text {
 			span {
@@ -777,17 +727,47 @@ $header-height: 80px;
 	.contact-text {
 		font-size: rem(24);
 		text-align: center;
+
+		.word {
+			.char {
+				display: inline-block;
+				animation: slide-up 1.3s cubic-bezier(0.5, 0.2, 0, 1);
+				animation-fill-mode: both;
+				animation-delay: calc(-0.8s + (var(--char-index) * 0.1s));
+			}
+		}
 	}
 
 	.contact-link {
+		position: relative;
+		display: inline-block;
 		text-align: center;
 		margin-top: rem(50);
+
+		&::after {
+			content: '';
+			display: block;
+			width: 0;
+			height: 2px;
+			background-color: #000;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
 
 		.link {
 			display: block;
 			font-family: 'Montserrat', sans-serif;
 			font-size: rem(80);
 			font-weight: 700;
+			position: relative;
+		}
+
+		&.on {
+			&::after {
+				animation: typo_animation 1.3s cubic-bezier(0.5, 0.2, 0, 1);
+				animation-fill-mode: both;
+			}
 		}
 	}
 }

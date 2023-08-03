@@ -36,12 +36,7 @@ AOS.init({
   });
  */
   $(window).scroll(function () {
-    if ($(this).scrollTop() >= $('.section-contact').offset().top - 30) {
-      $('.contact-text-wrap').addClass('on');
-      $('.contact-link').addClass('on');
-      
-      Splitting(); 
-    } 
+   
   });
 
   //work 더보기 스크립트
@@ -57,20 +52,21 @@ AOS.init({
       }
     });
   });
-
-  $(function () {
+  
     $(window).scroll(function () {
       if ($(this).scrollTop() >= $('#sec-work').offset().top - 300) {
-        $('#sec-work').addClass('active');
+        $('#sec-work').addClass('active');      
       } else {
         $('#sec-work').removeClass('active');
       }
 
-      if ($(this).scrollTop() >= $('#sec-contact').offset().top - 500) {
-        $('#sec-work').removeClass('active');
-      }
+      if ($(this).scrollTop() >= $('#sec-contact').offset().top - 300) {
+        $('.contact-text-wrap').addClass('on');
+        $('.contact-link').addClass('on');   
+
+        Splitting(); 
+      } 
     });
-  });
 
   window.addEventListener('load', function () {
     var cover = document.getElementById('cover'),

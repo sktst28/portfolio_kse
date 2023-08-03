@@ -188,6 +188,7 @@ $header-height: 80px;
 			top: 0;
 			right: 3%;
 			height: $header-height;
+			column-gap: 10px;
 		}
 	}
 
@@ -199,7 +200,7 @@ $header-height: 80px;
 			width: rem(40);
 
 			@media (max-width: 560px) {
-				width: rem(20);
+				width: rem(25);
 			}
 		}
 	}
@@ -723,11 +724,20 @@ $header-height: 80px;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+
+		@media (max-width: 1024px) {
+			height: 100%;
+			padding: rem(70) 0;
+		}
 	}
 
 	.contact-text-wrap {
 		opacity: 0;
 		transition: 0.1s all;
+
+		@media (max-width: 1024px) {
+			opacity: 1;
+		}
 
 		&.on {
 			opacity: 1;
@@ -737,6 +747,10 @@ $header-height: 80px;
 	.contact-text {
 		font-size: rem(24);
 		text-align: center;
+
+		@media (max-width: 1024px) {
+			font-size: rem(18);
+		}
 
 		.word {
 			.char {
@@ -755,6 +769,10 @@ $header-height: 80px;
 		margin-top: rem(50);
 		opacity: 0;
 
+		@media (max-width: 1024px) {
+			opacity: 1;
+		}
+
 		&::after {
 			content: '';
 			display: block;
@@ -772,6 +790,14 @@ $header-height: 80px;
 			font-size: rem(80);
 			font-weight: 700;
 			position: relative;
+
+			@media (max-width: 1200px) {
+				font-size: rem(50);
+			}
+
+			@media (max-width: 768px) {
+				font-size: rem(33);
+			}
 		}
 
 		&.on {

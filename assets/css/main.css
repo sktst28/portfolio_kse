@@ -167,6 +167,7 @@ body {
     top: 0;
     right: 3%;
     height: 80px;
+    column-gap: 10px;
   }
 }
 .header .link {
@@ -178,7 +179,7 @@ body {
 }
 @media (max-width: 560px) {
   .header .link img {
-    width: 1.25rem;
+    width: 1.5625rem;
   }
 }
 .header .text {
@@ -697,9 +698,20 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+@media (max-width: 1024px) {
+  .section-contact .container {
+    height: 100%;
+    padding: 4.375rem 0;
+  }
+}
 .section-contact .contact-text-wrap {
   opacity: 0;
   transition: 0.1s all;
+}
+@media (max-width: 1024px) {
+  .section-contact .contact-text-wrap {
+    opacity: 1;
+  }
 }
 .section-contact .contact-text-wrap.on {
   opacity: 1;
@@ -707,6 +719,11 @@ body {
 .section-contact .contact-text {
   font-size: 1.5rem;
   text-align: center;
+}
+@media (max-width: 1024px) {
+  .section-contact .contact-text {
+    font-size: 1.125rem;
+  }
 }
 .section-contact .contact-text .word .char {
   display: inline-block;
@@ -720,6 +737,11 @@ body {
   text-align: center;
   margin-top: 3.125rem;
   opacity: 0;
+}
+@media (max-width: 1024px) {
+  .section-contact .contact-link {
+    opacity: 1;
+  }
 }
 .section-contact .contact-link::after {
   content: "";
@@ -737,6 +759,16 @@ body {
   font-size: 5rem;
   font-weight: 700;
   position: relative;
+}
+@media (max-width: 1200px) {
+  .section-contact .contact-link .link {
+    font-size: 3.125rem;
+  }
+}
+@media (max-width: 768px) {
+  .section-contact .contact-link .link {
+    font-size: 2.0625rem;
+  }
 }
 .section-contact .contact-link.on {
   opacity: 1;

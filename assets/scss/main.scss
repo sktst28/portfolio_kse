@@ -181,7 +181,7 @@ $header-height: 80px;
 	.quick-list {
 		display: flex;
 		align-items: center;
-		column-gap: 5px;
+		column-gap: 15px;
 
 		@media (max-width: 768px) {
 			position: absolute;
@@ -192,7 +192,8 @@ $header-height: 80px;
 	}
 
 	.link {
-		display: inline-flex;
+		display: flex;
+		align-items: center;
 
 		img {
 			width: rem(40);

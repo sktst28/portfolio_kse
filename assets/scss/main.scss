@@ -717,11 +717,20 @@ $header-height: 80px;
 	position: relative;
 
 	.container {
-		height: 70vh;
+		height: 60vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+	}
+
+	.contact-text-wrap {
+		opacity: 0;
+		transition: 0.1s all;
+
+		&.on {
+			opacity: 1;
+		}
 	}
 
 	.contact-text {
@@ -766,6 +775,7 @@ $header-height: 80px;
 
 		&.on {
 			opacity: 1;
+
 			&::after {
 				animation: typo_animation 1.3s cubic-bezier(0.5, 0.2, 0, 1);
 				animation-fill-mode: both;

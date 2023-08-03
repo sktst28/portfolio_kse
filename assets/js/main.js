@@ -37,6 +37,7 @@ AOS.init({
  */
   $(window).scroll(function () {
     if ($(this).scrollTop() >= $('.section-contact').offset().top - 30) {
+      $('.contact-text-wrap').addClass('on');
       $('.contact-link').addClass('on');
       
       Splitting(); 

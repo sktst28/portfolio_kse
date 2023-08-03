@@ -690,11 +690,18 @@ body {
   position: relative;
 }
 .section-contact .container {
-  height: 70vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.section-contact .contact-text-wrap {
+  opacity: 0;
+  transition: 0.1s all;
+}
+.section-contact .contact-text-wrap.on {
+  opacity: 1;
 }
 .section-contact .contact-text {
   font-size: 1.5rem;

@@ -517,32 +517,74 @@ body {
 }
 
 /* 왓 아이 두 섹션 */
+.section-do .do-wrap {
+  display: flex;
+  align-items: stretch;
+}
+@media (max-width: 1024px) {
+  .section-do .do-wrap {
+    display: block;
+  }
+}
+.section-do .do-text {
+  flex: 1 0 40%;
+  max-width: 40%;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: right;
+  border-right: 1px solid #999;
+  padding-right: 5rem;
+}
+@media (max-width: 1024px) {
+  .section-do .do-text {
+    flex: none;
+    max-width: 100%;
+    font-size: 1.875rem;
+    padding-right: 0;
+    text-align: left;
+    border-right: none;
+    border-bottom: 1px solid #999;
+    padding-bottom: 1.875rem;
+  }
+}
 .section-do .do-list {
+  flex: 1 0 60%;
+  max-width: 60%;
   text-align: left;
+  padding-left: 5rem;
+}
+@media (max-width: 1024px) {
+  .section-do .do-list {
+    flex: none;
+    max-width: 100%;
+    padding-left: 0;
+    padding-top: 1.875rem;
+  }
 }
 .section-do .do-list__item {
   padding-bottom: 1.875rem;
 }
 .section-do .do-list .title {
+  font-size: 1.625rem;
   text-align: left;
   margin-bottom: 5px;
 }
 @media (max-width: 1024px) {
   .section-do .do-list .title {
-    font-size: 2.125em;
+    font-size: 1.375em;
   }
 }
 .section-do .do-list .des {
+  font-family: "SUIT", sans-serif;
   position: relative;
-  font-size: 1.25rem;
+  font-size: 1.1875rem;
   color: #444;
-  font-weight: 500;
-  line-height: 1.7;
+  line-height: 1.8;
   padding-left: 10px;
 }
 @media (max-width: 1024px) {
   .section-do .do-list .des {
-    font-size: 1.125em;
+    font-size: 1em;
   }
 }
 .section-do .do-list .des::before {

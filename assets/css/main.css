@@ -10,19 +10,6 @@
     width: 100%;
   }
 }
-/* @keyframes weight {
-	from {
-		font-weight: 100;
-	}
-
-	50% {
-		font-weight: 900;
-	}
-
-	to {
-		font-weight: 100;
-	}
-} */
 @keyframes slide-up {
   from {
     transform: translateY(125%);
@@ -603,6 +590,19 @@ body {
 /* 포트폴리오 섹션 */
 .section-work {
   position: relative;
+}
+.section-work .sub-text {
+  font-family: "SUIT", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 5rem;
+}
+@media (max-width: 1024px) {
+  .section-work .sub-text {
+    font-size: 1.25rem;
+  }
 }
 .section-work .work-list {
   display: flex;
